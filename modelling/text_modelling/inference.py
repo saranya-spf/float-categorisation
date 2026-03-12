@@ -8,9 +8,6 @@ import torch
 import torch.nn as nn
 from transformers import AutoModelForMaskedLM
 
-import sys
-sys.path.insert(0, '/Users/saranya.pal/Desktop/Projects/float_categorization')
-
 from modelling.text_modelling.text_processor import TextProcessor
 from modelling.text_modelling.tokenizer import TextTokenizer
 
@@ -24,7 +21,7 @@ class TextInferencer(nn.Module):
         device_name: str = "mps" if torch.backends.mps.is_available() else "cpu",
         **kwargs,
     ):
-        super().__init__()
+        super().__init__(**kwargs)
         self.device = torch.device(device_name)
         
         # Load model and immediately move it to the correct device (MPS for Mac)
