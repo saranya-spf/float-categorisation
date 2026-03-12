@@ -1,4 +1,4 @@
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Tuple
 
 import torch
 
@@ -9,7 +9,9 @@ class TextCollator:
     def __init__(self, model_name: str = "google-bert/bert-base-uncased"):
         self.tokenizer = TextTokenizer(model_name=model_name)
 
-    def __call__(self, batch: List[Dict[str, Any]]) -> Dict[str, torch.Tensor]:
+    def __call__(
+        self, batch: List[Dict[str, Any]]
+    ) -> Tuple[Dict[str, torch.Tensor], torch.Tensor]:
         texts = [item["text"] for item in batch]
         tokenized = self.tokenizer.tokenize(texts)
 
@@ -20,7 +22,5 @@ class TextCollator:
         if "token_type_ids" in tokenized:
             collated["token_type_ids"] = tokenized["token_type_ids"]
 
-        if "labels" in batch[0]:
-            collated["labels"] = torch.stack([item["labels"] for item in batch])
-
-        return collated
+        labels = torch.stack([item["labels"] for item in batch])
+        return collated, labels

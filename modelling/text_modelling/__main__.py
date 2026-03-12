@@ -10,6 +10,7 @@ from torch.utils.data import DataLoader
 
 from modelling.text_modelling.text_dataset import TextDataset
 from modelling.text_modelling.data_collator import TextCollator
+from modelling.text_modelling.classification_model import BERTClassifier
 
 
 if __name__ == "__main__":
@@ -19,8 +20,23 @@ if __name__ == "__main__":
 
     collator = TextCollator()
     
-    data = TextDataset(df=df, include_labels=False)
-    loader = DataLoader(dataset=data, batch_size=8, shuffle=False, collate_fn=collator)
+    data = TextDataset(df=df, include_labels=True)
+    loader = DataLoader(dataset=data, 
+            batch_size=8, 
+            shuffle=False, 
+            collate_fn=collator
+        )
+    
+    model = BERTClassifier()
+    model.train()
 
-    for txt in loader:
-        print(txt)
+    i = 0
+    for batch_x, batch_y in loader:
+        output = model(**batch_x)
+        print("output:", output.shape)
+        i += 1
+        
+        if i == 2:
+            print(output)
+            print(torch.argmax(output, dim=1))
+            break
