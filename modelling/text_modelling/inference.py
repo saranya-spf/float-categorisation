@@ -42,35 +42,3 @@ class TextInferencer(nn.Module):
             outputs = self.model(**token_tensors)
             
         return outputs.logits # or whatever specific output you need
-
-
-if __name__ == "__main__":
-    df = pd.read_csv("/Users/saranya.pal/Desktop/Projects/float_categorization/data/Copy of Float Sample Data - Sheet5.csv") # Your CSV path
-    
-    processor = TextProcessor(df)
-    processed_text = processor.process_text()
-    
-    tokenizer = TextTokenizer()
-    texts = processed_text["aggregated_text"].to_list()
-    
-    inferencer = TextInferencer()
-    
-    # Process in BATCHES instead of all at once
-    batch_size = 8  # Adjust this depending on your sequence lengths and available RAM
-    all_outputs = []
-    
-    print(f"Processing {len(texts)} rows in batches of {batch_size}...")
-    
-    for i in range(0, len(texts[:1]), batch_size):
-        batch_texts = texts[i : i + batch_size]
-        
-        # Assuming your TextTokenizer handles proper HuggingFace padding/truncation
-        # It should return input_ids and attention_mask
-        batch_tokens = tokenizer.tokenize(batch_texts)
-        
-        batch_output = inferencer.get_outputs(tokens=batch_tokens)
-        
-        # Move output back to CPU if you plan to store it in a list to prevent GPU/MPS memory build-up
-        all_outputs.append(batch_output.cpu())
-        
-        print(f"Processed batch {i // batch_size + 1}/{math.ceil(len(texts) / batch_size)}")

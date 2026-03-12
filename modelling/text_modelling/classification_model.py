@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import torch
 import torch.nn as nn
 
-from transformers import AutoModelForMaskedLM
+from transformers import AutoModel
 
 load_dotenv()
 ACCESS_TOKEN = os.environ.get("HF_TOKEN")
@@ -19,9 +19,7 @@ class BERTClassifier(nn.Module):
         fine_tune: bool = False,
     ):
         super().__init__()
-        self.bert = AutoModelForMaskedLM.from_pretrained(
-            model_name, token=ACCESS_TOKEN
-        ).bert
+        self.bert = AutoModel.from_pretrained(model_name, token=ACCESS_TOKEN)
 
         for param in self.bert.parameters():
             param.requires_grad = fine_tune
