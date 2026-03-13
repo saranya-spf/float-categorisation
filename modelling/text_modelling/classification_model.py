@@ -1,10 +1,13 @@
 import os
+import logging
 
 from dotenv import load_dotenv
 import torch
 import torch.nn as nn
 
 from transformers import AutoModel
+
+logging.getLogger("transformers").setLevel(logging.ERROR)
 
 load_dotenv()
 ACCESS_TOKEN = os.environ.get("HF_TOKEN")

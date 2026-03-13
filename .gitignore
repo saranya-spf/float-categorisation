@@ -17,3 +17,8 @@ notebooks/
 
 # Others
 .vscode/
+notes.txt
+status.txt
+
+# Models
+models_dict/

@@ -25,9 +25,13 @@ with open(CONFIG_PATH) as f:
     config = yaml.safe_load(f)
 
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+MODELS_DIR = Path(__file__).resolve().parents[2] / "models_dict"
 
 
 class Trainer:
+    BEST_MODEL_PATH = str(MODELS_DIR / "best_model.pt")
+    LAST_MODEL_PATH = str(MODELS_DIR / "last_model.pt")
+
     def __init__(
         self,
         X_train: pd.Series,
@@ -65,7 +69,7 @@ class Trainer:
                 collate_fn=self.collator,
             )
 
-    def train(self, model: nn.Module):
+    def train(self, model: nn.Module, restore_best_weights: bool = True):
         NUM_EPOCHS = config["NUM_EPOCHS"]
         LEARNING_RATE = config["LEARNING_RATE"]
 
@@ -75,6 +79,8 @@ class Trainer:
         loss_fn = CrossEntropyLoss()
         optimizer = AdamW(model.parameters(), lr=LEARNING_RATE)
         losses = []
+        best_val_f1 = 0.0
+        best_model_state = None
         num_classes = next(iter(self.train_loader))[1].shape[1]
 
         for epoch in range(NUM_EPOCHS):
@@ -122,12 +128,41 @@ class Trainer:
 
             if self.test_loader is not None:
                 val_probs, val_preds, val_labels = self._validate(model)
+                val_f1 = f1_score(val_labels, val_preds, average="weighted")
                 print(
                     f"Validation ROC: {roc_auc_score(val_labels, val_probs, multi_class='ovr', labels=range(num_classes)):0.3f}, "
-                    f"Validation F1-score: {f1_score(val_labels, val_preds, average='weighted'):0.3f}",
+                    f"Validation F1-score: {val_f1:0.3f}",
                     flush=True,
                 )
+
+                if val_f1 > best_val_f1:
+                    best_val_f1 = val_f1
+                    best_model_state = {
+                        k: v.cpu().clone() for k, v in model.state_dict().items()
+                    }
+                    self.save_model(model, path=self.BEST_MODEL_PATH)
+                    print(f"  -> Best model saved (F1: {best_val_f1:.3f})")
+
                 model.train()
+
+        self.save_model(model, path=self.LAST_MODEL_PATH)
+        print(f"Last epoch model saved.")
+
+        if restore_best_weights and best_model_state is not None:
+            model.load_state_dict(best_model_state)
+            model.to(DEVICE)
+            print(f"Restored best model weights (F1: {best_val_f1:.3f})")
+        print(f"Training complete. Best Validation F1: {best_val_f1:.3f}")
+
+    def save_model(
+        self,
+        model: nn.Module,
+        path: str = None,
+    ) -> None:
+        if path is None:
+            path = self.BEST_MODEL_PATH
+        Path(path).parent.mkdir(parents=True, exist_ok=True)
+        torch.save(model.state_dict(), path)
 
     @torch.no_grad()
     def _validate(self, model: nn.Module):
@@ -149,8 +184,33 @@ class Trainer:
         return all_probs, all_preds, all_labels
 
     @torch.no_grad()
-    def predict(self, model: nn.Module, X_valid: torch.Tensor):
-        pass
+    def predict(
+        self, 
+        model: nn.Module, 
+        model_dict_path: str, 
+        X: pd.Series
+    ):
+        model.load_state_dict(torch.load(model_dict_path, map_location=DEVICE))
+        model.to(DEVICE)
+        model.eval()
+
+        dataset = TextDataset(X)
+        loader = DataLoader(
+            dataset=dataset,
+            batch_size=8,
+            shuffle=False,
+            collate_fn=self.collator,
+        )
+
+        all_probs = []
+        for batch_x, _ in loader:
+            batch_x = {k: v.to(DEVICE) for k, v in batch_x.items()}
+            outputs = model(**batch_x)
+            all_probs.append(outputs.cpu().numpy())
+
+        all_probs = np.concatenate(all_probs)
+        all_preds = all_probs.argmax(axis=1)
+        return all_probs, all_preds
 
 
 def build_datasets(df: pd.DataFrame, test_size: float = 0.2):
@@ -161,7 +221,11 @@ def build_datasets(df: pd.DataFrame, test_size: float = 0.2):
     # Use argmax to get single label index for stratification
     y_labels = y.values.argmax(axis=1)
 
-    # Filter out classes with fewer than 2 samples (stratification requires at least 2)
+    #   Filter out classes with fewer than 2 samples (stratification requires at least 2)
+    #   Try to remove all classses whose sample <= 15
+    #   Even after that, we get a 13-class classification problem
+    #   Then predict some using the deterministic predictor
+
     label_counts = pd.Series(y_labels).value_counts()
     valid_mask = pd.Series(y_labels).isin(label_counts[label_counts >= 2].index).values
     X = X[valid_mask].reset_index(drop=True)

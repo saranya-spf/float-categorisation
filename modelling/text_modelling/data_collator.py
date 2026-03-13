@@ -22,5 +22,7 @@ class TextCollator:
         if "token_type_ids" in tokenized:
             collated["token_type_ids"] = tokenized["token_type_ids"]
 
-        labels = torch.stack([item["labels"] for item in batch])
+        labels = None
+        if "labels" in batch[0]:
+            labels = torch.stack([item["labels"] for item in batch])
         return collated, labels
