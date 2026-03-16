@@ -1,7 +1,9 @@
 import os
+import yaml
 import logging
 
 from dotenv import load_dotenv
+from pathlib import Path
 import torch
 import torch.nn as nn
 
@@ -9,14 +11,19 @@ from transformers import AutoModel
 
 logging.getLogger("transformers").setLevel(logging.ERROR)
 
+CONFIG_PATH = Path(__file__).resolve().parents[3] / "config.yaml"
+with open(CONFIG_PATH) as f:
+    config = yaml.safe_load(f)
+
 load_dotenv()
 ACCESS_TOKEN = os.environ.get("HF_TOKEN")
+MODEL_NAME = config["MODEL_NAME"]
 
 
 class BERTClassifier(nn.Module):
     def __init__(
         self,
-        model_name: str = "google-bert/bert-base-uncased",
+        model_name: str = MODEL_NAME,
         hidden_dim: int = 128,
         num_classes: int = 24,
         fine_tune: bool = False,
@@ -32,6 +39,10 @@ class BERTClassifier(nn.Module):
             nn.ReLU(),
             nn.Linear(hidden_dim, num_classes),
         )
+
+        for layer in self.classifier:
+            if isinstance(layer, nn.Linear):
+                nn.init.xavier_normal_(layer.weight)
 
     def forward(self, input_ids, attention_mask, token_type_ids=None):
         outputs = self.bert(

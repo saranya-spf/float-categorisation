@@ -1,17 +1,26 @@
 import os
+import yaml
 
 from dotenv import load_dotenv
+from pathlib import Path
+
 import torch
 import torch.nn as nn
 from transformers import AutoTokenizer
 
+CONFIG_PATH = Path(__file__).resolve().parents[2] / "config.yaml"
+with open(CONFIG_PATH) as f:
+    config = yaml.safe_load(f)
+
 load_dotenv()
 ACCESS_TOKEN = os.environ.get("HF_TOKEN")
+MODEL_NAME = config["MODEL_NAME"]
+
 
 class TextTokenizer(nn.Module):
     def __init__(
         self,
-        model_name: str = "google-bert/bert-base-uncased",
+        model_name: str = MODEL_NAME,
         padding: str = "max_length",
         max_length=128,
         truncation: bool = True,
@@ -29,7 +38,7 @@ class TextTokenizer(nn.Module):
         self.return_tensors = return_tensors
         self.max_length = max_length
 
-    def tokenize(self, text: str):
+    def __call__(self, text: str):
         return self.tokenizer(
             text,
             padding=self.padding,

@@ -19,6 +19,8 @@ notebooks/
 .vscode/
 notes.txt
 status.txt
+analysis/
+*.csv
 
 # Models
 models_dict/

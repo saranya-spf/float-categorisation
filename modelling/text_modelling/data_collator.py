@@ -13,7 +13,7 @@ class TextCollator:
         self, batch: List[Dict[str, Any]]
     ) -> Tuple[Dict[str, torch.Tensor], torch.Tensor]:
         texts = [item["text"] for item in batch]
-        tokenized = self.tokenizer.tokenize(texts)
+        tokenized = self.tokenizer(texts)
 
         collated = {
             "input_ids": tokenized["input_ids"],

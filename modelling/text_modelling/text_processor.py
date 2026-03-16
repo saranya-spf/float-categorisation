@@ -51,7 +51,7 @@ class TextProcessor:
 
     def _parallel_clean(self, all_texts: List[str]) -> List[str]:
         """Clean texts using multiprocessing for row-level parallelism."""
-        
+
         if len(all_texts) < 500:
             return [
                 self._clean_doc(doc) for doc in self.nlp.pipe(all_texts, batch_size=256)
@@ -70,7 +70,7 @@ class TextProcessor:
 
         return [text for chunk_result in results for text in chunk_result]
 
-    def process_text(self) -> pd.DataFrame:
+    def __call__(self) -> pd.DataFrame:
         text_cols = [col for col in self.df.columns if col != "gl code"]
 
         all_texts: List[str] = []
@@ -101,7 +101,6 @@ class TextProcessor:
         self.df["aggregated_text"] = self.df[cleaned_cols].agg(" ".join, axis=1)
 
         return self.segregate_features_and_labels(cleaned_labels)
-
 
     def _clean_doc(self, doc) -> str:
         """Process an already-tokenized spacy Doc object."""

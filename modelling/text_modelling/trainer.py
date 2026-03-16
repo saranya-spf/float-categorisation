@@ -3,6 +3,7 @@ from pathlib import Path
 from typing import Optional
 
 import numpy as np
+import optuna
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
@@ -17,7 +18,6 @@ from torch.utils.data import DataLoader
 from modelling.text_modelling.text_processor import TextProcessor
 from modelling.text_modelling.text_dataset import TextDataset
 from modelling.text_modelling.data_collator import TextCollator
-from modelling.text_modelling.classification_model import BERTClassifier
 
 
 CONFIG_PATH = Path(__file__).resolve().parents[2] / "config.yaml"
@@ -38,6 +38,7 @@ class Trainer:
         y_train: pd.DataFrame,
         X_test: Optional[pd.Series] = None,
         y_test: Optional[pd.DataFrame] = None,
+        batch_size: Optional[int] = None,
     ):
         self.collator = TextCollator()
         self.X_train = X_train
@@ -51,11 +52,11 @@ class Trainer:
         if self.X_test is not None and self.y_test is not None:
             test_dataset = TextDataset(X_test, y_test)
 
-        BATCH_SIZE = config["BATCH_SIZE"]
+        batch_size = batch_size or config["BATCH_SIZE"]
 
         self.train_loader = DataLoader(
             dataset=train_dataset,
-            batch_size=BATCH_SIZE,
+            batch_size=batch_size,
             shuffle=True,
             collate_fn=self.collator,
         )
@@ -69,11 +70,19 @@ class Trainer:
                 collate_fn=self.collator,
             )
 
-    def train(self, model: nn.Module, restore_best_weights: bool = True):
-        NUM_EPOCHS = config["NUM_EPOCHS"]
-        LEARNING_RATE = config["LEARNING_RATE"]
+    def train(
+        self,
+        model: nn.Module,
+        restore_best_weights: bool = True,
+        num_epochs: Optional[int] = None,
+        learning_rate: Optional[float] = None,
+        verbose: bool = True,
+    ) -> float:
+        NUM_EPOCHS = num_epochs or config["NUM_EPOCHS"]
+        LEARNING_RATE = learning_rate or config["LEARNING_RATE"]
 
-        print(f"Using device: {DEVICE}")
+        if verbose:
+            print(f"Using device: {DEVICE}")
         model.to(DEVICE)
         model.train()
         loss_fn = CrossEntropyLoss()
@@ -103,56 +112,64 @@ class Trainer:
                 all_probs.append(outputs.detach().cpu().numpy())
                 all_labels.append(batch_y.argmax(dim=1).cpu().numpy())
 
-                print(
-                    f"\r  Batch {i+1}/{len(self.train_loader)}, loss: {loss.item():.3f}",
-                    end="",
-                    flush=True,
-                )
+                if verbose:
+                    print(
+                        f"\r  Batch {i + 1}/{len(self.train_loader)}, loss: {loss.item():.3f}",
+                        end="",
+                        flush=True,
+                    )
 
-            print()
+            if verbose:
+                print()
             losses.append(total_loss)
 
             all_probs = np.concatenate(all_probs)
             all_preds = all_probs.argmax(axis=1)
             all_labels = np.concatenate(all_labels)
 
-            print(
-                f"Epoch {epoch+1}/{NUM_EPOCHS}, epoch loss: {total_loss:0.3f}",
-                flush=True,
-            )
-            print(
-                f"Train ROC: {roc_auc_score(all_labels, all_probs, multi_class='ovr', labels=range(num_classes)):0.3f}, "
-                f"Train F1-score: {f1_score(all_labels, all_preds, average='weighted'):0.3f}",
-                flush=True,
-            )
+            if verbose:
+                print(
+                    f"Epoch {epoch + 1}/{NUM_EPOCHS}, epoch loss: {total_loss:0.3f}",
+                    flush=True,
+                )
+                print(
+                    f"Train ROC: {roc_auc_score(all_labels, all_probs, multi_class='ovr', labels=range(num_classes)):0.3f}, "
+                    f"Train F1-score: {f1_score(all_labels, all_preds, average='weighted'):0.3f}",
+                    flush=True,
+                )
 
             if self.test_loader is not None:
                 val_probs, val_preds, val_labels = self._validate(model)
                 val_f1 = f1_score(val_labels, val_preds, average="weighted")
-                print(
-                    f"Validation ROC: {roc_auc_score(val_labels, val_probs, multi_class='ovr', labels=range(num_classes)):0.3f}, "
-                    f"Validation F1-score: {val_f1:0.3f}",
-                    flush=True,
-                )
+                if verbose:
+                    print(
+                        f"Validation ROC: {roc_auc_score(val_labels, val_probs, multi_class='ovr', labels=range(num_classes)):0.3f}, "
+                        f"Validation F1-score: {val_f1:0.3f}",
+                        flush=True,
+                    )
 
                 if val_f1 > best_val_f1:
                     best_val_f1 = val_f1
                     best_model_state = {
                         k: v.cpu().clone() for k, v in model.state_dict().items()
                     }
-                    self.save_model(model, path=self.BEST_MODEL_PATH)
-                    print(f"  -> Best model saved (F1: {best_val_f1:.3f})")
+                    if verbose:
+                        self.save_model(model, path=self.BEST_MODEL_PATH)
+                        print(f"  -> Best model saved (F1: {best_val_f1:.3f})")
 
                 model.train()
 
-        self.save_model(model, path=self.LAST_MODEL_PATH)
-        print(f"Last epoch model saved.")
+        if verbose:
+            self.save_model(model, path=self.LAST_MODEL_PATH)
+            print("Last epoch model saved.")
 
-        if restore_best_weights and best_model_state is not None:
-            model.load_state_dict(best_model_state)
-            model.to(DEVICE)
-            print(f"Restored best model weights (F1: {best_val_f1:.3f})")
-        print(f"Training complete. Best Validation F1: {best_val_f1:.3f}")
+            if restore_best_weights and best_model_state is not None:
+                model.load_state_dict(best_model_state)
+                model.to(DEVICE)
+                print(f"Restored best model weights (F1: {best_val_f1:.3f})")
+            print(f"Training complete. Best Validation F1: {best_val_f1:.3f}")
+
+        return best_val_f1
 
     def save_model(
         self,
@@ -184,12 +201,7 @@ class Trainer:
         return all_probs, all_preds, all_labels
 
     @torch.no_grad()
-    def predict(
-        self, 
-        model: nn.Module, 
-        model_dict_path: str, 
-        X: pd.Series
-    ):
+    def predict(self, model: nn.Module, model_dict_path: str, X: pd.Series):
         model.load_state_dict(torch.load(model_dict_path, map_location=DEVICE))
         model.to(DEVICE)
         model.eval()
@@ -212,10 +224,59 @@ class Trainer:
         all_preds = all_probs.argmax(axis=1)
         return all_probs, all_preds
 
+    @staticmethod
+    def tune(
+        df: pd.DataFrame,
+        n_trials: int = 20,
+        test_size: float = 0.2,
+        epoch_range: tuple = (2, 10),
+        lr_range: tuple = (1e-5, 1e-3),
+        batch_size_choices: tuple = (16, 32, 64, 128),
+    ) -> dict:
+        """Run Optuna hyperparameter search over num_epochs, learning_rate, and batch_size."""
+        from modelling.text_modelling.models.classification_model import BERTClassifier
+
+        X_train, X_test, y_train, y_test = build_datasets(df, test_size=test_size)
+        num_classes = y_train.shape[1]
+
+        def objective(trial: optuna.Trial) -> float:
+            num_epochs = trial.suggest_int("num_epochs", *epoch_range)
+            lr = trial.suggest_float("learning_rate", *lr_range, log=True)
+            batch_size = trial.suggest_categorical(
+                "batch_size", list(batch_size_choices)
+            )
+
+            model = BERTClassifier(fine_tune=True, num_classes=num_classes)
+            trainer = Trainer(
+                X_train=X_train,
+                X_test=X_test,
+                y_train=y_train,
+                y_test=y_test,
+                batch_size=batch_size,
+            )
+            best_val_f1 = trainer.train(
+                model,
+                num_epochs=num_epochs,
+                learning_rate=lr,
+                restore_best_weights=False,
+                verbose=False,
+            )
+            return best_val_f1
+
+        study = optuna.create_study(
+            direction="maximize",
+            pruner=optuna.pruners.MedianPruner(),
+        )
+        study.optimize(objective, n_trials=n_trials)
+
+        print(f"\nBest trial F1: {study.best_trial.value:.4f}")
+        print(f"Best params: {study.best_trial.params}")
+        return study.best_trial.params
+
 
 def build_datasets(df: pd.DataFrame, test_size: float = 0.2):
-    processor = TextProcessor(df)
-    X, y = processor.process_text()
+    text_processor = TextProcessor(df)
+    X, y = text_processor()
 
     # Stratified split using the original label (before one-hot)
     # Use argmax to get single label index for stratification
