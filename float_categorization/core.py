@@ -1,8 +1,8 @@
 import pandas as pd
 import torch
 
-from modelling.modelling.models.classification_model import BERTClassifier
-from modelling.modelling.trainer import Trainer, build_datasets
+from float_categorization.modelling.models.classification_model import BERTClassifier
+from float_categorization.modelling.trainer import Trainer, build_datasets
 
 
 def run_pipeline(file_path: str):

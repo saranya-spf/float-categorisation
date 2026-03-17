@@ -8,8 +8,8 @@ import warnings
 from pathlib import Path
 import pandas as pd
 
-from modelling.pre_processing.text_processor import TextProcessor
-from modelling.modelling.constant import TXT_COLS_TEST
+from float_categorization.pre_processing.text_processor import TextProcessor
+from float_categorization.modelling.constant import TXT_COLS_TEST
 
 
 class FuzzyRuleClassifier:

@@ -1,10 +1,10 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-from modelling.deterministic.fuzzy_rule_classifier import FuzzyRuleClassifier
-from modelling.pre_processing.text_processor import TextProcessor
-from modelling.modelling.trainer import Trainer
-from modelling.modelling.models.classification_model import BERTClassifier
+from float_categorization.deterministic.fuzzy_rule_classifier import FuzzyRuleClassifier
+from float_categorization.pre_processing.text_processor import TextProcessor
+from float_categorization.modelling.trainer import Trainer
+from float_categorization.modelling.models.classification_model import BERTClassifier
 
 
 def run_deterministic(df: pd.DataFrame) -> pd.DataFrame:

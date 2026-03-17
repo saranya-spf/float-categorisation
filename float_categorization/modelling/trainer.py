@@ -15,9 +15,9 @@ from torch.nn import CrossEntropyLoss
 from torch.optim import AdamW
 from torch.utils.data import DataLoader, WeightedRandomSampler
 
-from modelling.pre_processing.text_processor import TextProcessor
-from modelling.text_encoder.text_dataset import TextDataset
-from modelling.text_encoder.data_collator import TextCollator
+from float_categorization.pre_processing.text_processor import TextProcessor
+from float_categorization.text_encoder.text_dataset import TextDataset
+from float_categorization.text_encoder.data_collator import TextCollator
 
 
 CONFIG_PATH = Path(__file__).resolve().parents[2] / "config.yaml"
@@ -267,7 +267,7 @@ class Trainer:
         batch_size_choices: tuple = (16, 32, 64, 128),
     ) -> dict:
         """Run Optuna hyperparameter search over num_epochs, learning_rate, and batch_size."""
-        from modelling.modelling.models.classification_model import BERTClassifier
+        from float_categorization.modelling.models.classification_model import BERTClassifier
 
         X_train, X_test, y_train, y_test = build_datasets(df, test_size=test_size)
         num_classes = y_train.shape[1]

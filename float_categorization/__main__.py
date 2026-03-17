@@ -1,7 +1,7 @@
 import warnings
 from pathlib import Path
 
-from modelling.modelling.core import (
+from float_categorization.modelling.core import (
     run_pipeline, 
     evaluate, 
     fine_tune_model
