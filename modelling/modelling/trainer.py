@@ -13,11 +13,11 @@ import torch
 import torch.nn as nn
 from torch.nn import CrossEntropyLoss
 from torch.optim import AdamW
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, WeightedRandomSampler
 
-from modelling.text_modelling.text_processor import TextProcessor
-from modelling.text_modelling.text_dataset import TextDataset
-from modelling.text_modelling.data_collator import TextCollator
+from modelling.pre_processing.text_processor import TextProcessor
+from modelling.text_encoder.text_dataset import TextDataset
+from modelling.text_encoder.data_collator import TextCollator
 
 
 CONFIG_PATH = Path(__file__).resolve().parents[2] / "config.yaml"
@@ -39,6 +39,7 @@ class Trainer:
         X_test: Optional[pd.Series] = None,
         y_test: Optional[pd.DataFrame] = None,
         batch_size: Optional[int] = None,
+        imbalance_training: bool = True,
     ):
         self.collator = TextCollator()
         self.X_train = X_train
@@ -54,10 +55,36 @@ class Trainer:
 
         batch_size = batch_size or config["BATCH_SIZE"]
 
+        sampler = None
+        self.class_weights = None
+
+        if imbalance_training:
+            targets = torch.argmax(torch.tensor(self.y_train.values), dim=1)
+            unique_classes = np.unique(targets.numpy())
+            class_sample_count = np.array(
+                [len(np.where(targets.numpy() == t)[0]) for t in unique_classes]
+            )
+            weight = 1.0 / class_sample_count
+            class_to_weight = dict(zip(unique_classes, weight))
+            samples_weight = np.array(
+                [class_to_weight[int(t)] for t in targets.numpy()]
+            )
+
+            samples_weight = torch.from_numpy(samples_weight)
+            sampler = WeightedRandomSampler(samples_weight, len(samples_weight))
+
+            num_classes = self.y_train.shape[1]
+            cw = np.zeros(num_classes, dtype=np.float64)
+            for cls_idx, w in class_to_weight.items():
+                cw[cls_idx] = w
+            cw /= cw.sum()
+            self.class_weights = torch.tensor(cw, dtype=torch.float32)
+
         self.train_loader = DataLoader(
             dataset=train_dataset,
             batch_size=batch_size,
-            shuffle=True,
+            shuffle=(sampler is None),
+            sampler=sampler,
             collate_fn=self.collator,
         )
 
@@ -65,7 +92,7 @@ class Trainer:
         if test_dataset is not None:
             self.test_loader = DataLoader(
                 dataset=test_dataset,
-                batch_size=8,
+                batch_size=batch_size,
                 shuffle=False,
                 collate_fn=self.collator,
             )
@@ -85,7 +112,13 @@ class Trainer:
             print(f"Using device: {DEVICE}")
         model.to(DEVICE)
         model.train()
-        loss_fn = CrossEntropyLoss()
+        loss_fn = CrossEntropyLoss(
+            weight=(
+                self.class_weights.to(DEVICE)
+                if self.class_weights is not None
+                else None
+            )
+        )
         optimizer = AdamW(model.parameters(), lr=LEARNING_RATE)
         losses = []
         best_val_f1 = 0.0
@@ -234,7 +267,7 @@ class Trainer:
         batch_size_choices: tuple = (16, 32, 64, 128),
     ) -> dict:
         """Run Optuna hyperparameter search over num_epochs, learning_rate, and batch_size."""
-        from modelling.text_modelling.models.classification_model import BERTClassifier
+        from modelling.modelling.models.classification_model import BERTClassifier
 
         X_train, X_test, y_train, y_test = build_datasets(df, test_size=test_size)
         num_classes = y_train.shape[1]
@@ -276,7 +309,7 @@ class Trainer:
 
 def build_datasets(df: pd.DataFrame, test_size: float = 0.2):
     text_processor = TextProcessor(df)
-    X, y = text_processor()
+    X, y = text_processor.process_for_training()
 
     # Stratified split using the original label (before one-hot)
     # Use argmax to get single label index for stratification

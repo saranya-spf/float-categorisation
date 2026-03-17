@@ -1,8 +1,8 @@
 import pandas as pd
 import torch
 
-from modelling.text_modelling.models.classification_model import BERTClassifier
-from modelling.text_modelling.trainer import Trainer, build_datasets
+from modelling.modelling.models.classification_model import BERTClassifier
+from modelling.modelling.trainer import Trainer, build_datasets
 
 
 def run_pipeline(file_path: str):
@@ -12,16 +12,25 @@ def run_pipeline(file_path: str):
 
     X_train, X_test, y_train, y_test = build_datasets(df)
     model = BERTClassifier(fine_tune=True, num_classes=y_train.shape[1])
-    trainer = Trainer(X_train=X_train, X_test=X_test, y_train=y_train, y_test=y_test)
+    trainer = Trainer(
+        X_train=X_train, 
+        X_test=X_test, 
+        y_train=y_train, 
+        y_test=y_test,
+        imbalance_training=True,
+    )
 
-    trainer.train(model=model)
+    trainer.train(
+        model=model,
+        restore_best_weights=True,
+        verbose=True,
+    )
 
 
-def evaluate(file_path: str):
+def evaluate(file_path: str, model_path: str, output_path: str):
     df = pd.read_csv(file_path)
     X_train, X_test, y_train, y_test = build_datasets(df, test_size=0.2)
 
-    model_path = "/Users/saranya.pal/Desktop/Projects/float_categorization/models_dict/best_model.pt"
     state_dict = torch.load(model_path, map_location="cpu")
     num_classes = state_dict["classifier.2.bias"].shape[0]
 
@@ -49,7 +58,6 @@ def evaluate(file_path: str):
     print(results.to_string())
     print(f"\nAccuracy: {results['correct'].mean():.3f}")
 
-    output_path = "/Users/saranya.pal/Desktop/Projects/float_categorization/analysis/evaluation_results.csv"
     results.to_csv(output_path, index=False)
     print(f"Results saved to {output_path}")
 

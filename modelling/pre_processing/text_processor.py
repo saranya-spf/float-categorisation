@@ -1,30 +1,21 @@
 import os
-from typing import Optional, List, Tuple
+from typing import List, Tuple
 from concurrent.futures import ProcessPoolExecutor
 
 import pandas as pd
 import spacy
 
 
-COLS_TO_KEEP = [
-    "transaction type",
-    "payee",
-    "transaction detail",
-    "gl code",
-]
-
 _worker_nlp = None
 
 
 def _init_worker():
-    """Load a spaCy model once per worker process."""
     global _worker_nlp
     _worker_nlp = spacy.load("en_core_web_sm")
     _worker_nlp.disable_pipes("ner", "parser")
 
 
 def _process_chunk(texts: List[str]) -> List[str]:
-    """Clean a chunk of texts in a worker process."""
     return [
         " ".join(
             token.lemma_
@@ -36,8 +27,8 @@ def _process_chunk(texts: List[str]) -> List[str]:
 
 
 class TextProcessor:
-    def __init__(self, df: pd.DataFrame, cols_to_keep: Optional[List] = None):
-        self.df = df
+    def __init__(self, df: pd.DataFrame):
+        self.df = df.copy()
         self.df.columns = self.df.columns.str.strip().str.casefold()
         print("Loading spacy text processing model...")
         self.nlp = spacy.load("en_core_web_sm")
@@ -45,13 +36,8 @@ class TextProcessor:
 
         print("Spacy model loaded successfully")
 
-        if cols_to_keep is None:
-            cols_to_keep = COLS_TO_KEEP
-        self.df = self.df[cols_to_keep]
 
     def _parallel_clean(self, all_texts: List[str]) -> List[str]:
-        """Clean texts using multiprocessing for row-level parallelism."""
-
         if len(all_texts) < 500:
             return [
                 self._clean_doc(doc) for doc in self.nlp.pipe(all_texts, batch_size=256)
@@ -70,37 +56,46 @@ class TextProcessor:
 
         return [text for chunk_result in results for text in chunk_result]
 
-    def __call__(self) -> pd.DataFrame:
-        text_cols = [col for col in self.df.columns if col != "gl code"]
+
+    def __call__(self, cols: List[str]) -> pd.DataFrame:
+        cols = [c.strip().casefold() for c in cols]
+        missing = [c for c in cols if c not in self.df.columns]
+        if missing:
+            raise ValueError(f"Columns not found in DataFrame: {missing}")
 
         all_texts: List[str] = []
         col_sizes: List[int] = []
 
-        for col in text_cols:
+        for col in cols:
             texts = self.df[col].fillna("").astype(str).str.strip().str.lower().tolist()
             all_texts.extend(texts)
             col_sizes.append(len(texts))
 
-        gl_codes = (
-            self.df["gl code"].fillna("").astype(str).str.strip().str.lower().tolist()
-        )
-        all_texts.extend(gl_codes)
-        col_sizes.append(len(gl_codes))
-
         all_cleaned = self._parallel_clean(all_texts)
 
+        result = pd.DataFrame(index=self.df.index)
         idx = 0
-        for i, col in enumerate(text_cols):
+        for i, col in enumerate(cols):
             size = col_sizes[i]
-            self.df[f"cleaned_{col}"] = all_cleaned[idx : idx + size]
+            result[f"cleaned_{col}"] = all_cleaned[idx : idx + size]
             idx += size
 
-        cleaned_labels = all_cleaned[idx : idx + col_sizes[-1]]
+        return result
 
-        cleaned_cols = [f"cleaned_{col}" for col in text_cols]
-        self.df["aggregated_text"] = self.df[cleaned_cols].agg(" ".join, axis=1)
 
-        return self.segregate_features_and_labels(cleaned_labels)
+    def process_for_training(
+        self, label_col: str = "gl code"
+    ) -> Tuple[pd.Series, pd.DataFrame]:
+        label_col = label_col.strip().casefold()
+        feature_cols = [col for col in self.df.columns if col != label_col]
+
+        cleaned = self(feature_cols + [label_col])
+
+        cleaned_labels = cleaned[f"cleaned_{label_col}"].tolist()
+        cleaned_feature_cols = [f"cleaned_{col}" for col in feature_cols]
+        self.df["aggregated_text"] = cleaned[cleaned_feature_cols].agg(" ".join, axis=1)
+
+        return self._segregate_features_and_labels(cleaned_labels)
 
     def _clean_doc(self, doc) -> str:
         """Process an already-tokenized spacy Doc object."""
@@ -111,7 +106,7 @@ class TextProcessor:
         ]
         return " ".join(tokens)
 
-    def segregate_features_and_labels(
+    def _segregate_features_and_labels(
         self, cleaned_labels: List[str]
     ) -> Tuple[pd.Series, pd.DataFrame]:
         self.X = self.df["aggregated_text"]

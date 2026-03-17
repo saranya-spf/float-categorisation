@@ -5,6 +5,7 @@ build/
 dist/
 wheels/
 *.egg-info
+.ruff_cache/
 
 # Virtual environments
 .venv/
@@ -23,4 +24,4 @@ analysis/
 *.csv
 
 # Models
-models_dict/
+models_dict*/

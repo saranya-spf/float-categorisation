@@ -2,7 +2,7 @@ from typing import List, Dict, Any, Tuple
 
 import torch
 
-from modelling.text_modelling.tokenizer import TextTokenizer
+from modelling.text_encoder.tokenizer import TextTokenizer
 
 
 class TextCollator:
