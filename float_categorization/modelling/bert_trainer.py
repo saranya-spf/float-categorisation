@@ -28,7 +28,7 @@ DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 MODELS_DIR = Path(__file__).resolve().parents[2] / "models_dict"
 
 
-class Trainer:
+class BertTrainer:
     BEST_MODEL_PATH = str(MODELS_DIR / "best_model.pt")
     LAST_MODEL_PATH = str(MODELS_DIR / "last_model.pt")
 
@@ -267,7 +267,9 @@ class Trainer:
         batch_size_choices: tuple = (16, 32, 64, 128),
     ) -> dict:
         """Run Optuna hyperparameter search over num_epochs, learning_rate, and batch_size."""
-        from float_categorization.modelling.models.classification_model import BERTClassifier
+        from float_categorization.modelling.models.bert_model import (
+            BERTClassifier,
+        )
 
         X_train, X_test, y_train, y_test = build_datasets(df, test_size=test_size)
         num_classes = y_train.shape[1]
@@ -280,7 +282,7 @@ class Trainer:
             )
 
             model = BERTClassifier(fine_tune=True, num_classes=num_classes)
-            trainer = Trainer(
+            trainer = BertTrainer(
                 X_train=X_train,
                 X_test=X_test,
                 y_train=y_train,

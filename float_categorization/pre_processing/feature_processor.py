@@ -83,5 +83,6 @@ if __name__ == "__main__":
     feature_processor = FeatureProcessor(df)
     processed_df = feature_processor()
     processed_df.to_csv(
-        "/Users/saranya.pal/Desktop/Projects/float_categorization/data/numer_processed.csv"
+        "/Users/saranya.pal/Desktop/Projects/float_categorization/data/numer_processed.csv",
+        index=False,
     )

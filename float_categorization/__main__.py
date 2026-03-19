@@ -1,12 +1,7 @@
 import warnings
 from pathlib import Path
 
-from float_categorization.modelling.core import (
-    run_pipeline, 
-    evaluate, 
-    fine_tune_model
-)
-
+from float_categorization.core import run_pipeline, run_evaluate, run_inference
 warnings.filterwarnings("ignore")
 default_path = Path(__file__).parents[2]
 
@@ -17,9 +12,4 @@ if __name__ == "__main__":
     MODEL_SAVE_PATH = default_path / "models_dict" / "last_model.pt"
     OUTPUT_PATH = default_path / "analysis" / "evaluation_results.csv"
     # run_pipeline(FILE_PATH_1)
-
-    evaluate(
-        FILE_PATH_1,
-        MODEL_SAVE_PATH,
-        OUTPUT_PATH
-    )
+    run_evaluate(FILE_PATH_1, MODEL_SAVE_PATH, OUTPUT_PATH)
