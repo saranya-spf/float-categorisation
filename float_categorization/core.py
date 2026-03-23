@@ -54,4 +54,3 @@ def run_evaluate(
         )
     else:
         evaluate_bert_models(file_path, model_dict_path, output_path, use_deterministic)
-

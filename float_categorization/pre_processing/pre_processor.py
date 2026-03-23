@@ -10,11 +10,13 @@ from float_categorization.text_encoder.tf_idf_encoder import TfIdfEncoder
 
 
 class PreProcessor:
-    def __init__(self, df: pd.DataFrame, is_training: bool = True):
+    def __init__(
+        self, df: pd.DataFrame, is_training: bool = True, tfidf_overrides=None
+    ):
         self.df = df.copy()
         self.df.columns = self.df.columns.str.strip().str.casefold()
         self.is_training = is_training
-        self.tf_encoder = TfIdfEncoder()
+        self.tf_encoder = TfIdfEncoder(overrides=tfidf_overrides)
 
     def __call__(self):
         feature_processor = FeatureProcessor(self.df)
@@ -67,18 +69,3 @@ class PreProcessor:
         ).tocsr()
         return self.X_combined
 
-
-if __name__ == "__main__":
-    df = pd.read_csv(
-        "/Users/saranya.pal/Desktop/Projects/float_categorization/data/Copy of Float Sample Data - Sheet5.csv"
-    )
-    processor = PreProcessor(df, is_training=True)
-    processed_df, deterministic_df = processor()
-    processed_df.to_csv(
-        "/Users/saranya.pal/Desktop/Projects/float_categorization/data/model_processed.csv",
-        index=False,
-    )
-    deterministic_df.to_csv(
-        "/Users/saranya.pal/Desktop/Projects/float_categorization/data/deterministic_processed.csv",
-        index=False,
-    )

@@ -88,6 +88,11 @@ class FuzzyRuleClassifier:
             ],
         },
         "transaction detail": {
+            "5772 computer": [
+                lambda text: bool(
+                    re.search(r"hardware.*hardgoods", text, re.IGNORECASE)
+                ),
+            ],
             "1071 float usd account": [
                 lambda text: bool(
                     re.search(r"cash cad to cash usd", text, re.IGNORECASE)
@@ -106,15 +111,6 @@ class FuzzyRuleClassifier:
                 lambda text: bool(
                     re.search(
                         r"Card to charge SMG Appraisals from SMG-AR Channel",
-                        text,
-                        re.IGNORECASE,
-                    )
-                )
-            ],
-            "1359 1478897": [
-                lambda text: bool(
-                    re.search(
-                        r"To National Bank of Canada",
                         text,
                         re.IGNORECASE,
                     )
@@ -228,94 +224,96 @@ def print_label_distribution(file_path: str):
     print(cleaned["cleaned_gl code"].value_counts().to_string())
 
 
-if __name__ == "__main__":
-    FILE_PATH_1 = default_path / "data" / "Copy of Float Sample Data - Sheet5.csv"
-    df = pd.read_csv(FILE_PATH_1)
+# if __name__ == "__main__":
+#     FILE_PATH_1 = default_path / "data" / "Copy of Float Sample Data - Sheet5.csv"
+#     df = pd.read_csv(FILE_PATH_1)
 
-    # Simple cleaning for rule input features (strip, lowercase, collapse spaces)
-    manual_transformer = ManualFeatureTransformer(df)
-    manual_df = manual_transformer()
+#     # Simple cleaning for rule input features (strip, lowercase, collapse spaces)
+#     manual_transformer = ManualFeatureTransformer(df)
+#     manual_df = manual_transformer()
 
-    # Process numeric features (parses amount, handles nulls, etc.)
-    feature_processor = FeatureProcessor(df)
-    feature_df = feature_processor()
+#     # Process numeric features (parses amount, handles nulls, etc.)
+#     feature_processor = FeatureProcessor(df)
+#     feature_df = feature_processor()
 
-    # Merge manual-cleaned text cols + feature-processed numeric cols
-    # Keep manual text cols for rules, amount_parsed from feature_df
-    manual_df["amount_parsed"] = feature_df["amount_parsed"]
+#     # Merge manual-cleaned text cols + feature-processed numeric cols
+#     # Keep manual text cols for rules, amount_parsed from feature_df
+#     manual_df["amount_parsed"] = feature_df["amount_parsed"]
 
-    # Clean GL Code only via TextProcessor (for label normalization)
-    label_processor = TextProcessor(df)
-    label_cleaned = label_processor([" GL Code "])
-    manual_df["cleaned_gl_code"] = label_cleaned["cleaned_gl code"].values
+#     # Clean GL Code only via TextProcessor (for label normalization)
+#     label_processor = TextProcessor(df)
+#     label_cleaned = label_processor([" GL Code "])
+#     manual_df["cleaned_gl_code"] = label_cleaned["cleaned_gl code"].values
 
-    # Apply deterministic rules
-    fuzz_classifier = FuzzyRuleClassifier()
-    result = fuzz_classifier.apply_rules(manual_df)
+#     # Apply deterministic rules
+#     fuzz_classifier = FuzzyRuleClassifier()
+#     result = fuzz_classifier.apply_rules(manual_df)
 
-    actual_col = "cleaned_gl_code"
-    pred_col = "predicted_label"
+#     actual_col = "cleaned_gl_code"
+#     pred_col = "predicted_label"
 
-    total = len(result)
-    predicted_mask = result[pred_col].notna()
-    unpredicted_mask = ~predicted_mask
-    n_predicted = predicted_mask.sum()
-    n_unpredicted = unpredicted_mask.sum()
-    all_classes = set(result[actual_col].dropna().unique())
-    predicted_classes = set(result.loc[predicted_mask, pred_col].unique())
-    classes_with_coverage = all_classes & predicted_classes
-    classes_without_coverage = all_classes - predicted_classes
+#     total = len(result)
+#     predicted_mask = result[pred_col].notna()
+#     unpredicted_mask = ~predicted_mask
+#     n_predicted = predicted_mask.sum()
+#     n_unpredicted = unpredicted_mask.sum()
+#     all_classes = set(result[actual_col].dropna().unique())
+#     predicted_classes = set(result.loc[predicted_mask, pred_col].unique())
+#     classes_with_coverage = all_classes & predicted_classes
+#     classes_without_coverage = all_classes - predicted_classes
 
-    print(f"\n{'='*50}")
-    print(f"COVERAGE REPORT")
-    print(f"{'='*50}")
-    print(f"Total samples:             {total}")
-    print(f"Predicted:                 {n_predicted} ({n_predicted/total*100:.1f}%)")
-    print(
-        f"Left to predict:           {n_unpredicted} ({n_unpredicted/total*100:.1f}%)"
-    )
-    print(f"\nTotal classes:             {len(all_classes)}")
-    print(f"Classes with rules:        {len(classes_with_coverage)}")
-    print(f"Classes without rules:     {len(classes_without_coverage)}")
-    if classes_without_coverage:
-        for c in sorted(classes_without_coverage):
-            print(f"  - {c}")
+#     print(f"\n{'=' * 50}")
+#     print(f"COVERAGE REPORT")
+#     print(f"{'=' * 50}")
+#     print(f"Total samples:             {total}")
+#     print(
+#         f"Predicted:                 {n_predicted} ({n_predicted / total * 100:.1f}%)"
+#     )
+#     print(
+#         f"Left to predict:           {n_unpredicted} ({n_unpredicted / total * 100:.1f}%)"
+#     )
+#     print(f"\nTotal classes:             {len(all_classes)}")
+#     print(f"Classes with rules:        {len(classes_with_coverage)}")
+#     print(f"Classes without rules:     {len(classes_without_coverage)}")
+#     if classes_without_coverage:
+#         for c in sorted(classes_without_coverage):
+#             print(f"  - {c}")
 
-    # Accuracy metrics
-    if n_predicted > 0:
-        from sklearn.metrics import accuracy_score, f1_score, classification_report
+#     # Accuracy metrics
+#     if n_predicted > 0:
+#         from sklearn.metrics import accuracy_score, f1_score, classification_report
 
-        pred_df = result[predicted_mask]
-        y_true_pred = pred_df[actual_col]
-        y_pred_pred = pred_df[pred_col]
+#         pred_df = result[predicted_mask]
+#         y_true_pred = pred_df[actual_col]
+#         y_pred_pred = pred_df[pred_col]
 
-        acc_pred = accuracy_score(y_true_pred, y_pred_pred)
-        f1_w_pred = f1_score(
-            y_true_pred, y_pred_pred, average="weighted", zero_division=0
-        )
-        f1_m_pred = f1_score(y_true_pred, y_pred_pred, average="macro", zero_division=0)
+#         acc_pred = accuracy_score(y_true_pred, y_pred_pred)
+#         f1_w_pred = f1_score(
+#             y_true_pred, y_pred_pred, average="weighted", zero_division=0
+#         )
+#         f1_m_pred = f1_score(y_true_pred, y_pred_pred, average="macro", zero_division=0)
 
-        print(f"\n{'='*50}")
-        print(f"ACCURACY — predicted only ({n_predicted} samples)")
-        print(f"{'='*50}")
-        print(f"Accuracy:                  {acc_pred:.4f}")
-        print(f"F1 (weighted):             {f1_w_pred:.4f}")
-        print(f"F1 (macro):                {f1_m_pred:.4f}")
-        print(f"\n{classification_report(y_true_pred, y_pred_pred, zero_division=0)}")
+#         print(f"\n{'=' * 50}")
+#         print(f"ACCURACY — predicted only ({n_predicted} samples)")
+#         print(f"{'=' * 50}")
+#         print(f"Accuracy:                  {acc_pred:.4f}")
+#         print(f"F1 (weighted):             {f1_w_pred:.4f}")
+#         print(f"F1 (macro):                {f1_m_pred:.4f}")
+#         print(f"\n{classification_report(y_true_pred, y_pred_pred, zero_division=0)}")
 
-        # Overall: treat unpredicted as wrong (label = None)
-        y_true_all = result[actual_col]
-        y_pred_all = result[pred_col].fillna("__unpredicted__")
+#         # Overall: treat unpredicted as wrong (label = None)
+#         y_true_all = result[actual_col]
+#         y_pred_all = result[pred_col].fillna("__unpredicted__")
 
-        acc_all = accuracy_score(y_true_all, y_pred_all)
-        f1_w_all = f1_score(y_true_all, y_pred_all, average="weighted", zero_division=0)
-        f1_m_all = f1_score(y_true_all, y_pred_all, average="macro", zero_division=0)
+#         acc_all = accuracy_score(y_true_all, y_pred_all)
+#         f1_w_all = f1_score(y_true_all, y_pred_all, average="weighted", zero_division=0)
+#         f1_m_all = f1_score(y_true_all, y_pred_all, average="macro", zero_division=0)
 
-        print(f"{'='*50}")
-        print(f"ACCURACY — overall ({total} samples, unpredicted = wrong)")
-        print(f"{'='*50}")
-        print(f"Accuracy:                  {acc_all:.4f}")
-        print(f"F1 (weighted):             {f1_w_all:.4f}")
-        print(f"F1 (macro):                {f1_m_all:.4f}")
-    else:
-        print("\nNo predictions made — skipping accuracy metrics.")
+#         print(f"{'=' * 50}")
+#         print(f"ACCURACY — overall ({total} samples, unpredicted = wrong)")
+#         print(f"{'=' * 50}")
+#         print(f"Accuracy:                  {acc_all:.4f}")
+#         print(f"F1 (weighted):             {f1_w_all:.4f}")
+#         print(f"F1 (macro):                {f1_m_all:.4f}")
+#     else:
+#         print("\nNo predictions made — skipping accuracy metrics.")

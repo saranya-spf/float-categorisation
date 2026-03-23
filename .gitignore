@@ -22,6 +22,7 @@ notes.txt
 status.txt
 analysis/
 *.csv
+.DS_Store
 
 # Models
 models_dict*/

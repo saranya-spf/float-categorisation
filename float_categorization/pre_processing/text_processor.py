@@ -36,7 +36,6 @@ class TextProcessor:
 
         print("Spacy model loaded successfully")
 
-
     def _parallel_clean(self, all_texts: List[str]) -> List[str]:
         if len(all_texts) < 500:
             return [
@@ -55,7 +54,6 @@ class TextProcessor:
             results = list(executor.map(_process_chunk, chunks))
 
         return [text for chunk_result in results for text in chunk_result]
-
 
     def __call__(self, cols: List[str]) -> pd.DataFrame:
         cols = [c.strip().casefold() for c in cols]
@@ -81,7 +79,6 @@ class TextProcessor:
             idx += size
 
         return result
-
 
     def process_for_training(
         self, label_col: str = "gl code"

@@ -162,6 +162,8 @@ def run_ensemble_pipeline(
             f"({before} -> {len(unmatched)} rows)"
         )
 
+    use_class_weights = kwargs.pop("use_class_weights", True)
+
     X_train, X_test, y_train, y_test, label_names, processor, class_weights = (
         prepare_ml_data(unmatched, test_size=kwargs.pop("test_size", 0.2))
     )
@@ -173,7 +175,7 @@ def run_ensemble_pipeline(
         y_test,
         label_names,
         Classifier,
-        class_weights=class_weights,
+        class_weights=class_weights if use_class_weights else None,
         **kwargs,
     )
 
@@ -211,7 +213,7 @@ def inference_ensemble_models(
     tf_encoder = saved["tf_encoder"]
 
     X_all = processor.process_for_inference(tf_encoder)
-    preds = model.predict(X_all)
+    preds = np.asarray(model.predict(X_all)).astype(int).ravel()
     unmatched = unmatched.copy()
     unmatched["predicted_label"] = [label_names[p] for p in preds]
 
@@ -239,7 +241,7 @@ def evaluate_ensemble_models(
     y = pd.get_dummies(processor.processed_df["gl_code"], dtype=int)
     y_labels = y.values.argmax(axis=1)
 
-    preds = model.predict(X)
+    preds = np.asarray(model.predict(X)).astype(int).ravel()
 
     results = pd.DataFrame(
         {
@@ -256,11 +258,3 @@ def evaluate_ensemble_models(
     results.to_csv(output_path, index=False)
     print(f"Results saved to {output_path}")
 
-
-def fine_tune_ensemble(file_path: str, n_trials: int = 20):
-    pass
-
-
-if __name__ == "__main__":
-    file_path = "/Users/saranya.pal/Desktop/Projects/float_categorization/data/Copy of Float Sample Data - Sheet5.csv"
-    result_df = run_ensemble_pipeline(file_path, use_deterministic=False)

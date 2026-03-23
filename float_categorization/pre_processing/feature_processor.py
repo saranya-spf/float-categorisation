@@ -50,6 +50,8 @@ class FeatureProcessor:
     def process_further(self):
         def parse_amount(val):
             val = str(val).strip()
+            if not val or val.lower() == "nan":
+                return 0.0
             is_negative = val.startswith("(") and val.endswith(")")
             val = val.strip("()")
             val = val.replace(",", "")
@@ -74,15 +76,3 @@ class FeatureProcessor:
                 self.df[col] = self.df[col].fillna(fill_with)
 
         self.one_hot_encode(col_names)
-
-
-if __name__ == "__main__":
-    df = pd.read_csv(
-        "/Users/saranya.pal/Desktop/Projects/float_categorization/data/Copy of Float Sample Data - Sheet5.csv"
-    )
-    feature_processor = FeatureProcessor(df)
-    processed_df = feature_processor()
-    processed_df.to_csv(
-        "/Users/saranya.pal/Desktop/Projects/float_categorization/data/numer_processed.csv",
-        index=False,
-    )
