@@ -25,3 +25,4 @@ analysis/
 
 # Models
 models_dict*/
+catboost_info/

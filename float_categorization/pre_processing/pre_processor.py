@@ -44,7 +44,6 @@ class PreProcessor:
 
         return self.processed_df, self.processed_df_deterministic
 
-
     def process_for_training(self) -> Tuple[sp.csr_matrix, pd.DataFrame]:
         self.X_initial, self.y = (
             self.processed_df.drop("gl_code", axis=1),
@@ -58,6 +57,15 @@ class PreProcessor:
         ).tocsr()
 
         return self.X_combined, pd.get_dummies(self.y, dtype=int)
+
+    def process_for_inference(self, tf_encoder: TfIdfEncoder) -> sp.csr_matrix:
+        self.X_initial = self.processed_df.drop("gl_code", axis=1, errors="ignore")
+        encoded = tf_encoder.transform(self.X_initial["aggregated_text"])
+        self.X_initial.drop("aggregated_text", axis=1, inplace=True)
+        self.X_combined = sp.hstack(
+            [sp.csr_matrix(self.X_initial.values), encoded]
+        ).tocsr()
+        return self.X_combined
 
 
 if __name__ == "__main__":
