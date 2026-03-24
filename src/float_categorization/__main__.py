@@ -10,7 +10,7 @@ from float_categorization.pre_processing.text_processor import TextProcessor
 from float_categorization.runners.decide_deterministic import deterministic_decider
 
 warnings.filterwarnings("ignore")
-default_path = Path(__file__).parents[1]
+default_path = Path(__file__).resolve().parents[2]
 
 
 if __name__ == "__main__":
@@ -81,6 +81,7 @@ if __name__ == "__main__":
     print(classification_report(actual, predicted, zero_division=0))
 
     outputs_path = default_path / "outputs" / "evaluation_results_test.csv"
+    outputs_path.parent.mkdir(parents=True, exist_ok=True)
     full_output = test_df.loc[common_idx].copy()
     full_output["predicted_label"] = predicted.values
     full_output["correct"] = actual.values == predicted.values

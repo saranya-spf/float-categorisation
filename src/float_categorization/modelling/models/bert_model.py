@@ -11,7 +11,7 @@ from transformers import AutoModel
 
 logging.getLogger("transformers").setLevel(logging.ERROR)
 
-CONFIG_PATH = Path(__file__).resolve().parents[3] / "config.yaml"
+CONFIG_PATH = Path(__file__).resolve().parents[4] / "config.yaml"
 with open(CONFIG_PATH) as f:
     config = yaml.safe_load(f)
 

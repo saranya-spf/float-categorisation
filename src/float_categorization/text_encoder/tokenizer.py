@@ -8,7 +8,7 @@ import torch
 import torch.nn as nn
 from transformers import AutoTokenizer
 
-CONFIG_PATH = Path(__file__).resolve().parents[2] / "config.yaml"
+CONFIG_PATH = Path(__file__).resolve().parents[3] / "config.yaml"
 with open(CONFIG_PATH) as f:
     config = yaml.safe_load(f)
 

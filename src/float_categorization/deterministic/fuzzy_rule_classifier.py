@@ -198,7 +198,7 @@ class FuzzyRuleClassifier:
 
 
 warnings.filterwarnings("ignore")
-default_path = Path(__file__).parents[2]
+default_path = Path(__file__).parents[3]
 
 
 def print_label_distribution(file_path: str):

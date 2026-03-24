@@ -20,12 +20,12 @@ from float_categorization.text_encoder.text_dataset import TextDataset
 from float_categorization.text_encoder.data_collator import TextCollator
 
 
-CONFIG_PATH = Path(__file__).resolve().parents[2] / "config.yaml"
+CONFIG_PATH = Path(__file__).resolve().parents[3] / "config.yaml"
 with open(CONFIG_PATH) as f:
     config = yaml.safe_load(f)
 
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
-MODELS_DIR = Path(__file__).resolve().parents[2] / "models_dict"
+MODELS_DIR = Path(__file__).resolve().parents[3] / "models_dict"
 
 
 class BertTrainer:

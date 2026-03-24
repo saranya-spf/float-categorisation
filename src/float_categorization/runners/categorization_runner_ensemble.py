@@ -14,7 +14,7 @@ from float_categorization.runners.decide_deterministic import deterministic_deci
 from float_categorization.constant import LABEL_COL
 
 
-MODELS_DIR = Path(__file__).resolve().parents[2] / "models_dict"
+MODELS_DIR = Path(__file__).resolve().parents[3] / "models_dict"
 
 
 def prepare_ml_data(df: pd.DataFrame, test_size: float = 0.2):
