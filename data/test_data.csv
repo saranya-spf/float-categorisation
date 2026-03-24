@@ -1,0 +1,499 @@
+Date,Transaction Type,Payee, Amount ,Currency,Account,Initial Amount,Initial Currency,Transaction Detail, Spender , Last 4 digits , Funding Account ,Approver,Payment Authorizer, Invoice Number, FX Initial Amount , FX Initial Currency , Conversion Rate , GL CODE 
+2026-01-30T12:15:18,Bill Payment,National Bank of Canada (Capital Markets),"  (26,164.70)",CAD,Cash,,,To National Bank of Canada (Capital Markets),,,,Emilio Lagman, Emilio Lagman ,20664211,,,,1212 Accrued Receivables
+2026-01-30T12:15:18,Bill Payment,Artem Zadvoryanskiy,"  (4,231.04)",CAD,Cash,,,To Artem Zadvoryanskiy,,,,Emilio Lagman, Emilio Lagman ,Artem-Jan26,,,,5410 Wages & Salaries
+2026-01-30T12:15:18,Bill Payment,Phillip Rotgolts-Charlamov,"  (6,900.00)",CAD,Cash,,,To Phillip Rotgolts-Charlamov,,,,Emilio Lagman,Emilio Lagman,Phillip-Jan26,,,,5410 Wages & Salaries
+2026-01-30T12:15:18,Bill Payment,Rami Shaban,  (596.18),CAD,Cash,,,To Rami Shaban,,,,Emilio Lagman,Emilio Lagman,Rami-Jan26,,,,5410 Wages & Salaries
+2026-01-09T12:15:14,Bill Payment,Alis Immigration Inc,"  (1,000.00)",CAD,Cash,,,To Alis Immigration Inc,,,,Emilio Lagman, Emilio Lagman ,Spring-Alis-20250108,,,,5450 HR & Recruiting
+2026-01-22T12:15:10,Bill Payment,Pacific Canada Immigration Inc.,"  (1,340.00)",CAD,Cash,,,To Pacific Canada Immigration Inc.,,,,Emilio Lagman, Emilio Lagman ,12043803,,,,5450 HR & Recruiting
+2026-01-06T12:15:15,Bill Payment,B.B. Pavilion Corporation,"  (2,814.00)",CAD,Cash,,,To B.B. Pavilion Corporation,,,,Emilio Lagman, Emilio Lagman ,226718,,,,5700 Office Expenses
+2026-01-13T12:15:11,Bill Payment,B.B. Pavilion Corporation,"  (1,039.24)",CAD,Cash,,,To B.B. Pavilion Corporation,,,,Emilio Lagman, Emilio Lagman ,226718-2,,,,5700 Office Expenses
+2026-01-29T12:16:35,Bill Payment,Andrew Piemonte,"  (5,250.00)",CAD,Cash,,,To Andrew Piemonte,,,,Emilio Lagman,Emilio Lagman,SPARK-019,,,,Accounts Payable Sage
+2026-01-29T12:16:35,Bill Payment,Andrew Piemonte,"  (5,250.00)",CAD,Cash,,,To Andrew Piemonte,,,,Emilio Lagman, Emilio Lagman ,SPARK-020,,,,Accounts Payable Sage
+2026-01-07T12:15:17,Bill Payment,Torus Talent Consultants,"  (8,820.00)",CAD,Cash,,,To Torus Talent Consultants,,,,Emilio Lagman, Emilio Lagman ,001067,,,,Accounts Payable Sage
+2026-01-15T12:15:01,Bill Payment,Plaid CAD,"  (12,557.30)",CAD,Cash,,,To Plaid CAD,,,,Emilio Lagman, Emilio Lagman ,DQG61QV28G-2512,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,1909344 Alberta Ltd (Lead Monk),  (157.50),CAD,Cash,,,To 1909344 Alberta Ltd (Lead Monk),,,,Emilio Lagman, Emilio Lagman ,7WG66069VP9077228ZX,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,9480-6353 Quebec Inc. (LeadScout),"  (2,591.68)",CAD,Cash,,,To 9480-6353 Quebec Inc. (LeadScout),,,,Emilio Lagman, Emilio Lagman ,00000780,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,Asset Direct of Canada Inc,"  (6,246.64)",CAD,Cash,,,To Asset Direct of Canada Inc,,,,Emilio Lagman,Emilio Lagman,12053,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,Asset Direct of Canada Inc,"  (3,335.76)",CAD,Cash,,,To Asset Direct of Canada Inc,,,,Emilio Lagman, Emilio Lagman ,12054,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,Beautifi Solutions Inc.,"  (1,134.00)",CAD,Cash,,,To Beautifi Solutions Inc.,,,,Emilio Lagman,Emilio Lagman,1310,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,Bree Technologies Ltd,"  (1,186.50)",CAD,Cash,,,To Bree Technologies Ltd,,,,Emilio Lagman, Emilio Lagman ,8,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,Canem Systems,  (509.25),CAD,Cash,,,To Canem Systems,,,,Emilio Lagman,Emilio Lagman,4112,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,Cogent Canada Inc.,"  (1,402.67)",CAD,Cash,,,To Cogent Canada Inc.,,,,Emilio Lagman,Emilio Lagman,SF Nov - Dec 2025,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,ESC Corporate Services Ltd.,  (228.44),CAD,Cash,,,To ESC Corporate Services Ltd.,,,,Emilio Lagman, Emilio Lagman ,250568,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,Field Law,"  (2,707.15)",CAD,Cash,,,To Field Law,,,,Emilio Lagman, Emilio Lagman ,795437,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,FintelConnect,"  (2,368.60)",CAD,Cash,,,To FintelConnect,,,,Emilio Lagman,Emilio Lagman,8219,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,Go Loans,"  (5,604.38)",CAD,Cash,,,To Go Loans,,,,Emilio Lagman, Emilio Lagman ,G-LR-SF-003,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,Grant Thornton,  (755.37),CAD,Cash,,,To Grant Thornton,,,,Emilio Lagman, Emilio Lagman ,SPT-100379,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,NFP Media LLC (Lendforall),  (525.00),CAD,Cash,,,To NFP Media LLC (Lendforall),,,,Emilio Lagman,Emilio Lagman,1395,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,"Osler, Hoskin & Harcourt LLP",  (262.08),CAD,Cash,,,"To Osler, Hoskin & Harcourt LLP",,,,Emilio Lagman, Emilio Lagman ,13105077,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,Smarter Loans Inc.,"  (5,463.55)",CAD,Cash,,,To Smarter Loans Inc.,,,,Emilio Lagman, Emilio Lagman ,3543,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,TekRek Ltd.,"  (7,593.60)",CAD,Cash,,,To TekRek Ltd.,,,,Emilio Lagman,Emilio Lagman,2136,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,Wowa Leads,  (528.68),CAD,Cash,,,To Wowa Leads,,,,Emilio Lagman, Emilio Lagman ,2375,,,,Accounts Payable Sage
+2026-01-15T12:15:16,Bill Payment,Your Score Technologies LTD,"  (4,950.00)",CAD,Cash,,,To Your Score Technologies LTD,,,,Emilio Lagman, Emilio Lagman ,100,,,,Accounts Payable Sage
+2026-01-19T12:15:16,Bill Payment,Hub Insurance,"  (2,288.00)",CAD,Cash,,,To Hub Insurance,,,,Emilio Lagman, Emilio Lagman ,3904062,,,,Accounts Payable Sage
+2026-01-28T12:15:15,Bill Payment,South Coast BC Transportation Authority (TransLink),"  (27,213.35)",CAD,Cash,,,To South Coast BC Transportation Authority (TransLink),,,,Emilio Lagman, Emilio Lagman ,WI-15750,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,1558881 B.C. LTD.,"  (31,500.00)",CAD,Cash,,,To 1558881 B.C. LTD.,,,,Emilio Lagman, Emilio Lagman ,9250012,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,6069321 Canada Inc,"  (163,178.40)",CAD,Cash,,,To 6069321 Canada Inc,,,,Emilio Lagman, Emilio Lagman ,4732,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,6069321 Canada Inc,"  (2,441.25)",CAD,Cash,,,To 6069321 Canada Inc,,,,Emilio Lagman,Emilio Lagman,4733,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Borrowell,"  (157,230.46)",CAD,Cash,,,To Borrowell,,,,Emilio Lagman,Emilio Lagman,7707,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Credit Karma,"  (50,500.00)",CAD,Cash,,,To Credit Karma,,,,Emilio Lagman,Emilio Lagman,Q-26681,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Equifax Canada Co,"  (3,532.41)",CAD,Cash,,,To Equifax Canada Co,,,,Emilio Lagman,Emilio Lagman,2069613381,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Finder.com,"  (3,789.92)",CAD,Cash,,,To Finder.com,,,,Emilio Lagman,Emilio Lagman,IN0082487,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,"Five9, Inc.","  (50,547.47)",CAD,Cash,,,"To Five9, Inc.",,,,Emilio Lagman, Emilio Lagman ,INV01298313,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Flinks Technology Inc.,"  (18,533.59)",CAD,Cash,,,To Flinks Technology Inc.,,,,Emilio Lagman, Emilio Lagman ,27849,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Google LLC,"  (317,700.48)",CAD,Cash,,,To Google LLC,,,,Emilio Lagman, Emilio Lagman ,5458176024,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Google LLC,"  (2,821.57)",CAD,Cash,,,To Google LLC,,,,Emilio Lagman, Emilio Lagman ,5458124996,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Kingstar Media,"  (39,550.00)",CAD,Cash,,,To Kingstar Media,,,,Emilio Lagman,Emilio Lagman,ksm39601,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Long View Systems Corporation,"  (1,200.60)",CAD,Cash,,,To Long View Systems Corporation,,,,Emilio Lagman,Emilio Lagman,BP54500,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Quench Canada,  (76.50),CAD,Cash,,,To Quench Canada,,,,Emilio Lagman, Emilio Lagman ,1386918,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Ratehub,"  (1,732.50)",CAD,Cash,,,To Ratehub,,,,Emilio Lagman, Emilio Lagman ,INV-15182,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Sinch Communications,"  (23,731.93)",CAD,Cash,,,To Sinch Communications,,,,Emilio Lagman, Emilio Lagman ,140468783,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Sun Life Financial,"  (46,391.43)",CAD,Cash,,,To Sun Life Financial,,,,Emilio Lagman, Emilio Lagman ,202512Dec,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Trans Union of Canada Inc,"  (8,049.23)",CAD,Cash,,,To Trans Union of Canada Inc,,,,Emilio Lagman, Emilio Lagman ,0001440398,,,,Accounts Payable Sage
+2026-01-30T12:15:18,Bill Payment,Trans Union of Canada Inc,"  (78,947.45)",CAD,Cash,,,To Trans Union of Canada Inc,,,,Emilio Lagman,Emilio Lagman,0001446022,,,,Accounts Payable Sage
+2026-01-06T12:15:15,Bill Payment,National Bank of Canada,"  (5,232.98)",CAD,Cash,,,To National Bank of Canada,,,,Emilio Lagman, Emilio Lagman ,20260103,,,,Cash to CWB Servicing
+2026-01-08T15:15:00,Bill Payment,National Bank of Canada,"  5,232.98 ",CAD,Cash,,,Returned Bill payment from National Bank of Canada - Reason: Account information incorrect,,,,Emilio Lagman, Emilio Lagman ,20260103,,,,Cash to CWB Servicing
+2026-01-09T12:15:01,Bill Payment,National Bank of Canada,"  (5,232.98)",CAD,Cash,,,To National Bank of Canada,,,,Emilio Lagman,Emilio Lagman,20260103A,,,,Cash to CWB Servicing
+2026-01-01T04:07:21,Cashback,,"  2,729.14 ",CAD,Cash,,,Auto-redeemed monthly cashback,,,,,,,,,,4245 Interest Revenue - Spring
+2026-01-31T00:00:00,Ending Balance,,,,,,,,,,,,,,,,,
+2026-01-01T04:14:40,Float Fee,,  (20.00),CAD,Cash,,,Float Billing & Usage Fees,,,,,,INV-149872,,,,5690 Interest & bank charges
+2026-01-21T08:10:25,Funding,,"  500,000.00 ",CAD,Cash,,,Manual Bank Transfer,,, ****7596 ,,,,,,,1060 TD Chequing Account
+2026-01-27T08:10:15,Funding,,"  300,000.00 ",CAD,Cash,,,Manual Bank Transfer,,, ****7596 ,,,,,,,1060 TD Chequing Account
+2026-01-29T08:10:24,Funding,,"  175,000.00 ",CAD,Cash,,,Manual Bank Transfer,,, ****7596 ,,,,,,,1060 TD Chequing Account
+2026-01-31T08:10:07,Funding,,"  175,000.00 ",CAD,Cash,,,Manual Bank Transfer,,, ****7596 ,,,,,,,1060 TD Chequing Account
+2026-01-01T04:07:20,Interest,,"  1,829.62 ",CAD,Cash,,,Float Interest,,,,,,,,,,4245 Interest Revenue - Spring
+2026-01-08T23:47:13,Purchase,IN *CANADIAN LENDERS ASSO,"  (4,294.00)",CAD,Cash,,,CLA Invoice / renewed for another year , Michael Galpin , **** 7387 ,,,,,,,,1320 Prepaid Expenses
+2026-01-25T01:17:13,Purchase,TRUSTPILOT INC.,"  (6,304.52)",CAD,Cash,4/26/1912,USD,, Hector Alfonso Pertierra Marin , **** 6852 ,,,,,,,  1.401004 ,5773 Software License
+2026-01-06T17:45:39,Purchase,VALUECONNECT APPRAISAL,  (459.06),CAD,Cash,,,Card to charge SMG Appraisals from SMG-AR Channel, Tim Morrison , **** 3042 ,,,,,,,,1351 Due from Spring Mortgage Group
+2026-01-27T03:16:55,Purchase,VALUECONNECT APPRAISAL,  (572.25),CAD,Cash,,,Card to charge SMG Appraisals from SMG-AR Channel, Tim Morrison , **** 3042 ,,,,,,,,1351 Due from Spring Mortgage Group
+2026-01-29T03:56:50,Purchase,TERANET INC,  (18.88),CAD,Cash,,,Card to charge SMG Appraisals from SMG-AR Channel, Tim Morrison , **** 3042 ,,,,,,,,1351 Due from Spring Mortgage Group
+2026-01-18T00:04:44,Purchase,WORKSAFEBC,"  (4,899.53)",CAD,Cash,,,For one-time credit card only payments and legal invoices.,Emilio Lagman,**** 8807,,,,,,,,5410 Wages & Salaries
+2026-01-01T03:58:44,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-02T22:05:43,Purchase,Indeed CAI26-00008022,  (443.17),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-06T17:45:24,Purchase,"CHECKR, INC CHECKR.COM",  (593.14),CAD,Cash,2/28/1901,USD,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,  1.395624 ,5450 HR & Recruiting
+2026-01-07T00:34:08,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-09T16:05:22,Purchase,BambooHRLLC,"  (5,885.11)",CAD,Cash,4174.02,USD,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,  1.409938 ,5450 HR & Recruiting
+2026-01-09T23:10:02,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-09T23:10:21,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-13T05:30:57,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-14T04:51:27,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-16T22:48:40,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-16T22:52:44,Purchase,Indeed CAI26-00017048,  (525.62),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-17T03:10:32,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-17T03:10:32,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-17T03:10:39,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN",Erin Baile,**** 3741,,,,,,,,5450 HR & Recruiting
+2026-01-17T03:11:38,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-17T03:14:46,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-20T00:10:11,Purchase,Indeed CAI26-00018635,  (525.24),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-21T00:37:04,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN",Erin Baile,**** 3741,,,,,,,,5450 HR & Recruiting
+2026-01-22T00:09:49,Purchase,Indeed CAI26-00019570,  (526.23),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-22T04:05:34,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-22T23:19:32,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-22T23:28:03,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-23T03:55:29,Purchase,LinkedInPreA *68403976,  (53.32),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-24T01:56:50,Purchase,Indeed CAI26-00020946,  (526.10),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-25T01:17:47,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-25T22:51:26,Purchase,Indeed CAI26-00021979,  (536.99),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-25T22:52:12,Purchase,WRANGLE.IO,  (315.23),CAD,Cash,8/12/1900,USD,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,  1.401022 ,5450 HR & Recruiting
+2026-01-27T03:17:22,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-28T01:23:08,Purchase,Indeed CAI26-00023313,  (525.78),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-28T01:29:33,Purchase,TRUSTII,  (16.80),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-29T00:12:06,Purchase,LinkedInPreA *77412266,  (40.00),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-29T00:13:56,Purchase,TRUSTII,  (16.80),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-29T23:12:16,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-29T23:13:49,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-30T03:28:53,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-31T06:22:48,Purchase,LinkedIn P780567676,  (155.10),CAD,Cash,,,, Hector Alfonso Pertierra Marin , **** 8662 ,,,,,,,,5450 HR & Recruiting
+2026-01-31T23:42:52,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5450 HR & Recruiting
+2026-01-31T23:43:04,Purchase,TRUSTII,  (31.36),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN",Erin Baile,**** 3741,,,,,,,,5450 HR & Recruiting
+2026-01-07T00:27:48,Purchase,INSURANCE COUNCILS OF SAS,  (700.00),CAD,Cash,,,License Renewals, Joyce Pong , **** 2640 ,,,,,,,,5610 Accounting & Legal
+2026-01-14T00:20:55,Purchase,SPEEDY SEARCH & REGIST,  (25.73),CAD,Cash,,,License Renewals, Joyce Pong , **** 2640 ,,,,,,,,5610 Accounting & Legal
+2026-01-17T03:15:05,Purchase,XAI LLC,  (42.40),CAD,Cash,1/29/1900,USD,License Renewals, Joyce Pong , **** 2640 ,,,,,,,  1.413333 ,5610 Accounting & Legal
+2026-01-25T01:15:50,Purchase,ALBERTA INSURANCE COUNCIL,  (25.00),CAD,Cash,,,License Renewals,Joyce Pong,**** 2640,,,,,,,,5610 Accounting & Legal
+2026-01-07T00:28:27,Purchase,FACEBK *TKZN2B57Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)", Hector Alfonso Pertierra Marin , **** 9922 ,,,,,,,,5615 Facebook Advertising
+2026-01-09T23:06:42,Purchase,FACEBK *ZQ4V8BH7Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)", Hector Alfonso Pertierra Marin , **** 9922 ,,,,,,,,5615 Facebook Advertising
+2026-01-11T22:03:14,Purchase,FACEBK *NF6NFAV6Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)", Hector Alfonso Pertierra Marin , **** 9922 ,,,,,,,,5615 Facebook Advertising
+2026-01-14T04:53:31,Purchase,FACEBK *B32YLAV6Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)",Hector Alfonso Pertierra Marin,**** 9922,,,,,,,,5615 Facebook Advertising
+2026-01-16T22:52:57,Purchase,FACEBK *9V2CSBR6Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)", Hector Alfonso Pertierra Marin , **** 9922 ,,,,,,,,5615 Facebook Advertising
+2026-01-18T21:25:56,Purchase,FACEBK *8B5NSAD7Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)", Hector Alfonso Pertierra Marin , **** 9922 ,,,,,,,,5615 Facebook Advertising
+2026-01-20T00:10:36,Purchase,FACEBK *EV2F4C57Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)", Hector Alfonso Pertierra Marin , **** 9922 ,,,,,,,,5615 Facebook Advertising
+2026-01-22T00:05:21,Purchase,FACEBK *BH9U8BV6Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)", Hector Alfonso Pertierra Marin , **** 9922 ,,,,,,,,5615 Facebook Advertising
+2026-01-22T23:26:01,Purchase,FACEBK *AAKLSBM7Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)", Hector Alfonso Pertierra Marin , **** 9922 ,,,,,,,,5615 Facebook Advertising
+2026-01-24T16:28:13,Purchase,FACEBK *CVUWABD7Z2,  (612.02),CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)", Hector Alfonso Pertierra Marin , **** 9922 ,,,,,,,,5615 Facebook Advertising
+2026-01-25T01:17:13,Purchase,FACEBK *N69FAC97Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)", Hector Alfonso Pertierra Marin , **** 9922 ,,,,,,,,5615 Facebook Advertising
+2026-01-26T21:06:11,Purchase,FACEBK *8NJG6JM6Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)", Hector Alfonso Pertierra Marin , **** 9922 ,,,,,,,,5615 Facebook Advertising
+2026-01-28T01:26:26,Purchase,FACEBK *22F2AJM6Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)", Hector Alfonso Pertierra Marin , **** 9922 ,,,,,,,,5615 Facebook Advertising
+2026-01-29T06:07:46,Purchase,FACEBK *8CTAVCH7Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)",Hector Alfonso Pertierra Marin,**** 9922,,,,,,,,5615 Facebook Advertising
+2026-01-31T02:13:42,Purchase,FACEBK *3RNBTC97Z2,"  (2,919.00)",CAD,Cash,,,"Facebook/Instagram advertising spend under new ad account 862444328461160, created november 2022.
+
+updated limit to $62K per month (increase spend to $2K per day)", Hector Alfonso Pertierra Marin , **** 9922 ,,,,,,,,5615 Facebook Advertising
+2026-01-31T02:13:38,Purchase,BITLY.COM,  (48.41),CAD,Cash,35,USD,"Requesting funds, as discussed, for Marketing costs for things such as Zapier and Asana. Thanks!", Hector Alfonso Pertierra Marin , **** 3032 ,,,,,,,  1.383143 ,5617 Other Advertising
+2026-01-04T05:55:56,Purchase,MICROSOFT*ADS-F107L5YD,"  (2,504.30)",CAD,Cash,,,"Bing Ad Spend c/c - $25K limit (Mar 9, 2023)", Hector Alfonso Pertierra Marin , **** 5235 ,,,,,,,,5617 Other Advertising
+2026-01-11T00:10:29,Purchase,MICROSOFT*ADS-F107L5YD,"  (2,505.18)",CAD,Cash,,,"Bing Ad Spend c/c - $25K limit (Mar 9, 2023)", Hector Alfonso Pertierra Marin , **** 5235 ,,,,,,,,5617 Other Advertising
+2026-01-16T22:52:08,Purchase,MICROSOFT*ADS-F107L5YD,"  (2,503.28)",CAD,Cash,,,"Bing Ad Spend c/c - $25K limit (Mar 9, 2023)",Hector Alfonso Pertierra Marin,**** 5235,,,,,,,,5617 Other Advertising
+2026-01-22T23:26:05,Purchase,MICROSOFT*ADS-F107L5YD,"  (2,506.50)",CAD,Cash,,,"Bing Ad Spend c/c - $25K limit (Mar 9, 2023)",Hector Alfonso Pertierra Marin,**** 5235,,,,,,,,5617 Other Advertising
+2026-01-28T01:22:01,Purchase,MICROSOFT*ADS-F107L5YD,"  (2,501.06)",CAD,Cash,,,"Bing Ad Spend c/c - $25K limit (Mar 9, 2023)",Hector Alfonso Pertierra Marin,**** 5235,,,,,,,,5617 Other Advertising
+2026-01-31T23:42:59,Purchase,MICROSOFT*ADS-F107L5YD,"  (2,502.10)",CAD,Cash,,,"Bing Ad Spend c/c - $25K limit (Mar 9, 2023)", Hector Alfonso Pertierra Marin , **** 5235 ,,,,,,,,5617 Other Advertising
+2026-01-07T00:47:04,Purchase,TIKTOK INC.,  (53.50),CAD,Cash,,,Tiktok spend for new advertising campaigns created november 2022, Hector Alfonso Pertierra Marin , **** 4840 ,,,,,,,,5617 Other Advertising
+2026-01-14T06:15:40,Purchase,VARIFY.IO A/B TESTING,  (163.04),CAD,Cash,4/8/1900,EUR,"Requesting funds, as discussed, for Marketing costs for things such as Zapier and Asana. Thanks!", Hector Alfonso Pertierra Marin , **** 3032 ,,,,,,,  1.646869 ,5617 Other Advertising
+2026-01-02T05:40:21,Purchase,WAVE - *STARTUPTIVE,  (100.57),CAD,Cash,,,"This is for a virtual office space in Toronto. There is an initial deposit of 1 month (79+HST), and we'll be on a promo with 30% discount off the $89.27 for the first 3 months. The initial charge is $144.64 (79+49+HST (Ontario)).",Hector Alfonso Pertierra Marin,**** 1663,,,,,,,,5700 Office Expenses
+2026-01-02T05:41:00,Purchase,INDIGO PARK - V101/102 MO,  (645.49),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-05T04:25:37,Purchase,HOLT RENFREW VANCOUVER,"  (3,000.00)",CAD,Cash,,,Staff/Business Partner Holiday Present Gift Cards , Michael Galpin , **** 7387 ,,,,,,,,5700 Office Expenses
+2026-01-05T05:40:41,Purchase,HARRY ROSEN # F060,"  (3,000.00)",CAD,Cash,,,Staff/Business Partner Holiday Present Gift Cards , Michael Galpin , **** 7387 ,,,,,,,,5700 Office Expenses
+2026-01-06T05:15:53,Purchase,ENCORE CANADA,"  (5,096.05)",CAD,Cash,,,For one-time credit card only payments and legal invoices., Emilio Lagman , **** 8807 ,,,,,,,,5700 Office Expenses
+2026-01-06T05:15:58,Purchase,EXPEDIA 73342831222457,  (585.36),CAD,Cash,,,Montreal Christmas Party / Round Trip to YVR Winner (wins 2 round trips + hotel stay)- Youssef Zeghloul + 1. Booked his hotel in Vancouver! , Michael Galpin , **** 7387 ,,,,,,,,5700 Office Expenses
+2026-01-06T05:17:15,Purchase,CARFAX CANADA ULC,  (76.60),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-06T05:17:15,Purchase,CARFAX CANADA ULC,  (76.60),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-06T05:17:15,Purchase,CARFAX CANADA ULC,  (76.60),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-06T17:45:37,Purchase,AMAZON.CA* J77X94JY3,  (125.00),CAD,Cash,,,, Karina Plazola , **** 2636 ,,,,,,,,5700 Office Expenses
+2026-01-06T17:45:37,Purchase,AMAZON.CA* S54VG9283,  (25.00),CAD,Cash,,,,Karina Plazola,**** 2636,,,,,,,,5700 Office Expenses
+2026-01-07T00:32:50,Purchase,ZOMATO LIMITED,  (23.70),CAD,Cash,16.89,USD,Cake for Avijit farewell, Harjot Kaur , **** 9999 ,,,,,,,  1.403197 ,5700 Office Expenses
+2026-01-07T04:41:18,Purchase,CARFAX CANADA ULC,  (76.60),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements",Emily Gardner,**** 9954,,,,,,,,5700 Office Expenses
+2026-01-08T00:18:39,Purchase,URBAN FARE #7618,  (223.91),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-08T04:29:49,Purchase,CARFAX CANADA ULC,  (76.60),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-09T06:00:18,Purchase,CARFAX CANADA ULC,  (76.60),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements",Emily Gardner,**** 9954,,,,,,,,5700 Office Expenses
+2026-01-09T06:00:18,Purchase,CARFAX CANADA ULC,  (76.60),CAD,Cash,,,, Emily Gardner , **** 1021 ,,,,,,,,5700 Office Expenses
+2026-01-09T23:08:18,Purchase,IC* INSTACART,  (45.09),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-09T23:08:44,Purchase,IC* INSTACART,  (45.09),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-09T23:09:20,Purchase,IC* INSTACART,  (39.58),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-10T03:30:20,Purchase,IC* INSTACART,  (4.00),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-10T03:32:30,Purchase,AMAZON.CA* 618HO5SA3,  (140.00),CAD,Cash,,,, Karina Plazola , **** 2636 ,,,,,,,,5700 Office Expenses
+2026-01-10T03:35:36,Purchase,AMAZON.CA* U508C43A3,  (50.00),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-10T03:35:37,Purchase,AMAZON.CA* SR2XS78H3,  (115.00),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-10T03:36:20,Purchase,CPC / SCP 645001,  (15.32),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-10T03:36:20,Purchase,CPC / SCP 645001,  (15.32),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-10T03:36:21,Purchase,CPC / SCP 645001,  (15.32),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-10T03:36:21,Purchase,CPC / SCP 645001,  (15.32),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-10T03:36:22,Purchase,CPC / SCP 645001,  (15.32),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-10T03:36:22,Purchase,CPC / SCP 645001,  (130.20),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-10T05:36:03,Purchase,CRAFT HEAD OFFICE E-GI,  (150.00),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-10T06:05:19,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-10T06:05:19,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-10T06:05:20,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-10T06:05:20,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-11T00:41:14,Purchase,"BLACKHAWK NETWORK, INC.",  (50.00),CAD,Cash,,,, Karina Plazola , **** 2636 ,,,,,,,,5700 Office Expenses
+2026-01-11T06:40:46,Purchase,HOLT RENFREW VANCOUVER,  (159.04),CAD,Cash,,,, Michael Galpin , **** 7387 ,,,,,,,,5700 Office Expenses
+2026-01-13T00:52:38,Purchase,CARFAX CANADA ULC,  (102.85),CAD,Cash,,,,Emily Gardner,**** 1021,,,,,,,,5700 Office Expenses
+2026-01-13T00:52:39,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements",Emily Gardner,**** 9954,,,,,,,,5700 Office Expenses
+2026-01-13T05:30:03,Purchase,TOP OF VANCOUVER REVOLVIN,  (150.00),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.",Karina Plazola,**** 1865,,,,,,,,5700 Office Expenses
+2026-01-13T05:30:39,Purchase,AMAZON.CA* TA3LZ0VG3,"  (1,500.00)",CAD,Cash,,,,Karina Plazola,**** 2636,,,,,,,,5700 Office Expenses
+2026-01-13T05:30:54,Purchase,AMAZON.CA* ZY72H4BH3,"  (1,050.00)",CAD,Cash,,,,Karina Plazola,**** 2636,,,,,,,,5700 Office Expenses
+2026-01-13T05:31:32,Purchase,CPC / SCP 645001,  (8.95),CAD,Cash,,,IT Hardware shipment box, Vishnu Gattu , **** 2875 ,,,,,,,,5700 Office Expenses
+2026-01-13T05:31:56,Purchase,STAPLES STORE #254,  (46.48),CAD,Cash,,,IT Hardware shipment, Vishnu Gattu , **** 2875 ,,,,,,,,5700 Office Expenses
+2026-01-13T05:31:56,Purchase,STAPLES STORE #254,  (46.48),CAD,Cash,,,IT Hardware shipment, Vishnu Gattu , **** 2875 ,,,,,,,,5700 Office Expenses
+2026-01-14T00:16:55,Purchase,URBAN FARE #7615,  (21.99),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-14T00:19:29,Purchase,PHARMASAVE 1101,  (77.22),CAD,Cash,,,,Karina Plazola,**** 9909,,,,,,,,5700 Office Expenses
+2026-01-14T04:51:55,Purchase,AMAZON.CA* AP3FV1T33,  (30.00),CAD,Cash,,,, Karina Plazola , **** 2636 ,,,,,,,,5700 Office Expenses
+2026-01-14T04:51:56,Purchase,AMAZON.CA* 4U2SG6DH3,  (15.00),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-14T04:51:56,Purchase,AMAZON.CA* B933R84O3,  (50.00),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-14T23:43:13,Purchase,IC* COSTCO BY INSTACAR,  (340.38),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-15T03:58:18,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,, Emily Gardner , **** 1021 ,,,,,,,,5700 Office Expenses
+2026-01-15T03:58:19,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,,Emily Gardner,**** 1021,,,,,,,,5700 Office Expenses
+2026-01-15T23:14:32,Purchase,MPBSDPLIENSPPSR,  (8.00),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements",Emily Gardner,**** 9954,,,,,,,,5700 Office Expenses
+2026-01-15T23:18:53,Purchase,RAZ*Zomato Online Order,  (19.75),CAD,Cash,,,,Harjot Kaur,**** 9999,,,,,,,,5700 Office Expenses
+2026-01-15T23:19:18,Purchase,ZOMATO LIMITED,  (20.28),CAD,Cash,14.37,USD,It will refund. Payment got failed ,Harjot Kaur,**** 9999,,,,,,,  1.411273 ,5700 Office Expenses
+2026-01-16T03:34:45,Purchase,AMAZON.CA* FV3GQ0TD3,  (140.00),CAD,Cash,,,,Karina Plazola,**** 2636,,,,,,,,5700 Office Expenses
+2026-01-16T03:35:33,Purchase,CPC / SCP 645001,  (15.32),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-17T05:50:25,Purchase,CPC / SCP 645001,  (8.95),CAD,Cash,,,IT Hardware shipment box, Vishnu Gattu , **** 2875 ,,,,,,,,5700 Office Expenses
+2026-01-17T05:50:26,Purchase,CPC / SCP 645001,  (40.23),CAD,Cash,,,IT Hardware shipment, Vishnu Gattu , **** 2875 ,,,,,,,,5700 Office Expenses
+2026-01-17T05:51:26,Purchase,AMAZON.CA* S095307N3,  (35.71),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-18T00:01:48,Purchase,MPBSDPLIENSPPSR,  (8.00),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-18T00:01:48,Purchase,MPBSDPLIENSPPSR,  (8.00),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-18T00:01:48,Purchase,MPBSDPLIENSPPSR,  (8.00),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-18T00:01:50,Purchase,MPBSDPLIENSPPSR,  (8.00),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-18T00:03:51,Purchase,URBAN FARE #7615,  (48.98),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-18T00:04:47,Purchase,PYU*Zepto Marketplace Pri,  (8.78),CAD,Cash,1/5/1900,USD,, Harjot Kaur , **** 9999 ,,,,,,,  1.413849 ,5700 Office Expenses
+2026-01-18T23:01:00,Purchase,STERICYCLE ULC CAD,  (177.62),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-19T02:30:15,Purchase,PACE TEL SYSTEMS PRIVAT,  (313.16),CAD,Cash,10/3/1954,INR,, Harjot Kaur , **** 9999 ,,,,,,,  0.015658 ,5700 Office Expenses
+2026-01-20T05:39:15,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-20T05:39:15,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,, Emily Gardner , **** 1021 ,,,,,,,,5700 Office Expenses
+2026-01-21T05:40:48,Purchase,STAPLES STORE #254,  (10.06),CAD,Cash,,,,Karina Plazola,**** 9909,,,,,,,,5700 Office Expenses
+2026-01-21T05:41:13,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-22T00:09:10,Purchase,URBAN FARE #7615,  (21.99),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-22T04:05:04,Purchase,AMAZON.CA* G087S4MD3,  (370.00),CAD,Cash,,,, Karina Plazola , **** 2636 ,,,,,,,,5700 Office Expenses
+2026-01-22T04:06:50,Purchase,CARFAX CANADA ULC,  (102.85),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-22T23:22:21,Purchase,MPBSDPLIENSPPSR,  (8.00),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-22T23:23:18,Purchase,COCONUT GROVE,  (820.96),CAD,Cash,,,Spring Financial CX-Gift cards ($10 Tim Horton cards)., Emilio Lagman , **** 1808 ,,,,,,,,5700 Office Expenses
+2026-01-22T23:24:16,Purchase,AMAZON.CA* 6M71Q3GX3,  (89.49),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.",Karina Plazola,**** 1865,,,,,,,,5700 Office Expenses
+2026-01-22T23:24:17,Purchase,AMAZON.CA* PU0AO9AG3,  (89.49),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-23T06:07:31,Purchase,AMAZON* X84AG8ZN3,  (31.11),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-23T06:07:33,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-23T06:07:34,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-23T06:27:55,Purchase,WESTMINSTER CITY COUNC,  (104.01),CAD,Cash,2/23/1900,GBP,, Michael Galpin , **** 7387 ,,,,,,,  1.891091 ,5700 Office Expenses
+2026-01-23T06:27:56,Purchase,WESTMINSTER CITY COUNC,  (104.01),CAD,Cash,2/23/1900,GBP,, Michael Galpin , **** 7387 ,,,,,,,  1.891091 ,5700 Office Expenses
+2026-01-24T01:47:38,Purchase,AMAZON* OQ0I010X3,  (127.64),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-24T01:54:48,Purchase,AMAZON.CA* PI4ZE8RM3,  (61.99),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-24T01:56:30,Purchase,URBAN FARE #7615,  (54.98),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-24T01:57:21,Purchase,PVR LIMITED,  (84.52),CAD,Cash,5500,INR,,Harjot Kaur,**** 9999,,,,,,,  0.015367 ,5700 Office Expenses
+2026-01-24T03:42:30,Purchase,CPC / SCP 645001,  (15.32),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-24T05:57:24,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-24T05:57:24,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,, Emily Gardner , **** 1021 ,,,,,,,,5700 Office Expenses
+2026-01-24T05:57:25,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,, Emily Gardner , **** 1021 ,,,,,,,,5700 Office Expenses
+2026-01-27T03:19:46,Purchase,AMAZON.CA* 4L6U79V53,  (360.00),CAD,Cash,,,, Karina Plazola , **** 2636 ,,,,,,,,5700 Office Expenses
+2026-01-27T03:20:17,Purchase,CARFAX CANADA ULC,  (102.85),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-27T03:20:17,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-28T01:28:49,Purchase,AMAZON.CA* GN8NY0P13,  (75.00),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-28T01:28:49,Purchase,AMAZON.CA* RY4EQ6OX3,  (85.00),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-28T02:15:35,Purchase,"BLACKHAWK NETWORK, INC.","  (1,500.00)",CAD,Cash,,,, Karina Plazola , **** 2636 ,,,,,,,,5700 Office Expenses
+2026-01-28T02:15:35,Purchase,"BLACKHAWK NETWORK, INC.",  (100.00),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-28T02:15:35,Purchase,"BLACKHAWK NETWORK, INC.","  (1,000.00)",CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-28T02:18:48,Purchase,HOLT RENFREW VANCOUVER,  (500.00),CAD,Cash,,,,Karina Plazola,**** 9909,,,,,,,,5700 Office Expenses
+2026-01-28T05:26:55,Purchase,CARFAX CANADA ULC,  (102.85),CAD,Cash,,,, Emily Gardner , **** 1021 ,,,,,,,,5700 Office Expenses
+2026-01-28T05:52:10,Purchase,B2C LOBLAW- GIFT OF CH,  (250.00),CAD,Cash,,,, Karina Plazola , **** 2636 ,,,,,,,,5700 Office Expenses
+2026-01-28T21:42:43,Purchase,SQ *JOEY BENTALL ONE,  (425.00),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-29T00:04:09,Purchase,STARBUCKS 04890,  (100.00),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-29T00:11:18,Purchase,URBAN FARE #7615,  (21.99),CAD,Cash,,,,Karina Plazola,**** 9909,,,,,,,,5700 Office Expenses
+2026-01-29T00:44:43,Purchase,ALERT FIRST,  (99.75),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-29T03:55:33,Purchase,PUROLATOR - ESN/720000,  (65.08),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-29T03:57:01,Purchase,TOP OF VANCOUVER REVOLVIN,  (150.00),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-29T03:57:26,Purchase,TST-Central Taps  Foo,  (100.00),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-29T03:58:53,Purchase,CPC / SCP 645001,  (15.32),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-29T03:59:34,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,, Emily Gardner , **** 1021 ,,,,,,,,5700 Office Expenses
+2026-01-29T03:59:34,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,, Emily Gardner , **** 1021 ,,,,,,,,5700 Office Expenses
+2026-01-29T03:59:34,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,,Emily Gardner,**** 1021,,,,,,,,5700 Office Expenses
+2026-01-29T03:59:35,Purchase,CARFAX CANADA ULC,  (102.85),CAD,Cash,,,, Emily Gardner , **** 1021 ,,,,,,,,5700 Office Expenses
+2026-01-30T03:24:04,Purchase,AMAZON.CA* YL66S5Q63,  (170.00),CAD,Cash,,,, Karina Plazola , **** 2636 ,,,,,,,,5700 Office Expenses
+2026-01-30T03:48:04,Purchase,CACTUS CLUB BENTALL,"  (1,150.00)",CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-30T05:57:45,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,, Emily Gardner , **** 1021 ,,,,,,,,5700 Office Expenses
+2026-01-30T06:22:41,Purchase,CS *CASHSTAR GFT CRD,  (50.00),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-31T02:14:52,Purchase,MISHREE COCKTAIL & CUISI,  (100.00),CAD,Cash,,,"This would be for food & beverage, events, prizes, awards etc.", Karina Plazola , **** 1865 ,,,,,,,,5700 Office Expenses
+2026-01-31T05:48:44,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,, Emily Gardner , **** 1021 ,,,,,,,,5700 Office Expenses
+2026-01-31T05:48:44,Purchase,CARFAX CANADA ULC,  (81.85),CAD,Cash,,,, Emily Gardner , **** 1021 ,,,,,,,,5700 Office Expenses
+2026-01-31T23:39:20,Purchase,MPBSDPLIENSPPSR,  (8.00),CAD,Cash,,,"Passtime GPS renewals for the Spring Auto Financial product we manage for Cypress Hill.  Use Passtime platform to reduce risk and prevent losses on vehicles in the Cypress portfolio.
+
+6/20/2022 - Updated Card Limit to $1000 needed to match renewal requirements", Emily Gardner , **** 9954 ,,,,,,,,5700 Office Expenses
+2026-01-31T23:42:23,Purchase,COAL HARBOUR LIQUOR STORE,  (124.25),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-31T23:42:33,Purchase,URBAN FARE #7615,  (54.98),CAD,Cash,,,, Karina Plazola , **** 9909 ,,,,,,,,5700 Office Expenses
+2026-01-02T01:39:32,Purchase,Business Prime,  (558.88),CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-04T23:36:04,Purchase,Amazon.ca*V42314HH3,  (149.46),CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-05T04:25:39,Purchase,Amazon.ca*FE82I8SM3,  (149.46),CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-07T00:46:28,Purchase,Amazon.ca*0789I1GV3,  (149.46),CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-07T23:52:12,Purchase,AMZN Mktp CA*KR1331ZC3,  (197.98),CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-14T04:20:55,Purchase,APPLE.COM/CA,"  (4,478.88)",CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-14T04:20:56,Purchase,APPLE.COM/CA,"  (2,493.54)",CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-14T04:20:57,Purchase,APPLE.COM/CA,"  (2,239.44)",CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-14T04:20:57,Purchase,APPLE.COM/CA,  (762.30),CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-14T04:20:58,Purchase,APPLE.COM/CA,"  (4,987.08)",CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-15T04:16:48,Purchase,APPLE.COM/CA,  (762.30),CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-15T22:51:29,Purchase,APPLE.COM/CA,"  (4,224.78)",CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-15T22:52:31,Purchase,Amazon.ca*XI9US98R3,  (259.10),CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods,Dillon Hall,**** 4799,,,,,,,,5772 Computers
+2026-01-20T05:11:39,Purchase,AMZN Mktp CA*6P9IQ67S3,  (28.72),CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-21T01:02:28,Purchase,AMZN Mktp CA*RB4SN91Y3,  (98.52),CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-28T05:50:45,Purchase,ULINE,  (195.60),CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-29T23:04:51,Purchase,ZAPIER.COM/CHARGE,  (162.68),CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-30T22:23:23,Purchase,AMZN Mktp CA*W01XB7A03,  (172.45),CAD,Cash,,,Miscellaneous IT purchases - Hardware / Hardgoods, Dillon Hall , **** 4799 ,,,,,,,,5772 Computers
+2026-01-01T16:34:34,Purchase,GOOGLE *CLOUD vT3DVD,  (1.37),CAD,Cash,,,, Dillon Hall , **** 6151 ,,,,,,,,5773 Software License
+2026-01-01T16:34:42,Purchase,Amazon Web Services,"  (114,387.18)",CAD,Cash,,,Spring vendor card for i) Amazon Web Services and ii) Google Cloud Platform, Erin Baile , **** 4494 ,,,,,,,,5773 Software License
+2026-01-01T16:34:42,Purchase,Amazon Web Services,  (91.82),CAD,Cash,,,Spring vendor card for i) Amazon Web Services and ii) Google Cloud Platform, Erin Baile , **** 4494 ,,,,,,,,5773 Software License
+2026-01-01T23:59:11,Purchase,"GITHUB, INC.",  (595.07),CAD,Cash,426.97,USD,,Erin Baile,**** 7663,,,,,,,  1.393704 ,5773 Software License
+2026-01-02T01:39:38,Purchase,DROPBOX*SYSR46X8653P,  (17.91),CAD,Cash,,,Monthly Dropbox Subscription, Emilio Lagman , **** 7649 ,,,,,,,,5773 Software License
+2026-01-02T01:40:07,Purchase,GOOGLE*WORKSPACE BLOOM,  (73.92),CAD,Cash,,,, Dillon Hall , **** 2135 ,,,,,,,,5773 Software License
+2026-01-02T01:40:14,Purchase,GOOGLE*WORKSPACE SPRIN,  (646.19),CAD,Cash,,,"Google G-Suite Recurring Charges 
+Spring  - $17.47/month
+Freshstart - $65.52
+
+Approved by Victor Ko", Dillon Hall , **** 8604 ,,,,,,,,5773 Software License
+2026-01-02T01:40:15,Purchase,GOOGLE*WORKSPACE FRESH,  (92.40),CAD,Cash,,,"Google G-Suite Recurring Charges 
+Spring  - $17.47/month
+Freshstart - $65.52
+
+Approved by Victor Ko", Dillon Hall , **** 8604 ,,,,,,,,5773 Software License
+2026-01-02T01:40:15,Purchase,GOOGLE*WORKSPACE SPRIN,"  (11,678.41)",CAD,Cash,,,"Google G-Suite Recurring Charges 
+Spring  - $17.47/month
+Freshstart - $65.52
+
+Approved by Victor Ko", Dillon Hall , **** 8604 ,,,,,,,,5773 Software License
+2026-01-02T01:40:18,Purchase,GOOGLE*WORKSPACE SPRIN,  (24.64),CAD,Cash,,,"Google G-Suite Recurring Charges 
+Spring  - $17.47/month
+Freshstart - $65.52
+
+Approved by Victor Ko", Dillon Hall , **** 8604 ,,,,,,,,5773 Software License
+2026-01-02T01:40:59,Purchase,GOOGLE*CLOUD 7MMVWK,  (0.22),CAD,Cash,,,, Erin Baile , **** 8191 ,,,,,,,,5773 Software License
+2026-01-02T01:41:06,Purchase,GOOGLE*CLOUD 2GVM5S,  (6.22),CAD,Cash,,,, Erin Baile , **** 4848 ,,,,,,,,5773 Software License
+2026-01-02T05:41:36,Purchase,DBT CLOUD SUBSCRIPTION,  (696.85),CAD,Cash,5/14/1901,USD,DW Project DBT licenses 5 users, Erin Baile , **** 8168 ,,,,,,,  1.393700 ,5773 Software License
+2026-01-02T06:20:41,Purchase,PADDLE.NET* STRAWPOLL,  (81.67),CAD,Cash,,,, Dillon Hall , **** 6151 ,,,,,,,,5773 Software License
+2026-01-02T06:45:20,Purchase,NAME-CHEAP.COM* 6FA4BV,  (309.90),CAD,Cash,8/9/1900,USD,, Erin Baile , **** 0089 ,,,,,,,  1.393686 ,5773 Software License
+2026-01-02T16:50:21,Purchase,CLOUDFLARE,  (126.76),CAD,Cash,3/30/1900,USD,, Erin Baile , **** 3003 ,,,,,,,  1.393733 ,5773 Software License
+2026-01-02T22:05:19,Purchase,"GITHUB, INC.",  (13.94),CAD,Cash,1/9/1900,USD,Recurring monthly purchases and licenses, Erin Baile , **** 8472 ,,,,,,,  1.394000 ,5773 Software License
+2026-01-02T22:05:19,Purchase,"GITHUB, INC.",  (13.94),CAD,Cash,1/9/1900,USD,Recurring monthly purchases and licenses, Erin Baile , **** 8472 ,,,,,,,  1.394000 ,5773 Software License
+2026-01-03T00:31:30,Purchase,AUTOPAL SOFTWARE,  (766.14),CAD,Cash,7/2/1901,USD,Auto Pal (LMS Software), Erin Baile , **** 6486 ,,,,,,,  1.393717 ,5773 Software License
+2026-01-03T06:20:45,Purchase,KINSTA,  (628.91),CAD,Cash,3/26/1901,USD,, Dillon Hall , **** 6151 ,,,,,,,  1.393706 ,5773 Software License
+2026-01-03T17:05:21,Purchase,VERCEL MKT SUPABASE,  (910.03),CAD,Cash,652.06,USD,,Erin Baile,**** 7663,,,,,,,  1.395623 ,5773 Software License
+2026-01-03T17:06:42,Purchase,"GITHUB, INC.",  (13.96),CAD,Cash,1/9/1900,USD,Recurring monthly purchases and licenses, Erin Baile , **** 8472 ,,,,,,,  1.396000 ,5773 Software License
+2026-01-04T01:41:38,Purchase,Dropbox CY8XNYTCKK72,  (17.91),CAD,Cash,,,Dropbox Plus Subscription - use by F&A team, Victor Ko , **** 6606 ,,,,,,,,5773 Software License
+2026-01-04T01:42:36,Purchase,OPENAI,  (547.21),CAD,Cash,392.09,USD,, Erin Baile , **** 8363 ,,,,,,,  1.395623 ,5773 Software License
+2026-01-04T01:42:57,Purchase,HEX.TECH,"  (1,047.74)",CAD,Cash,750.73,USD,, Erin Baile , **** 5135 ,,,,,,,  1.395628 ,5773 Software License
+2026-01-04T05:55:45,Purchase,NAME-CHEAP.COM* IBUI1D,  (20.91),CAD,Cash,1/13/1900,USD,, Erin Baile , **** 0089 ,,,,,,,  1.395861 ,5773 Software License
+2026-01-04T21:01:29,Purchase,"GITHUB, INC.",  (13.96),CAD,Cash,1/9/1900,USD,Recurring monthly purchases and licenses, Erin Baile , **** 8472 ,,,,,,,  1.396000 ,5773 Software License
+2026-01-05T01:10:37,Purchase,SPLINE.DESIGN,  (251.22),CAD,Cash,6/28/1900,USD,, Dillon Hall , **** 6151 ,,,,,,,  1.395667 ,5773 Software License
+2026-01-05T01:10:38,Purchase,GRAMMARLY CO*GDLLFUL,  (131.18),CAD,Cash,4/2/1900,USD,, Dillon Hall , **** 6151 ,,,,,,,  1.395680 ,5773 Software License
+2026-01-06T00:50:47,Purchase,DROPBOX*SHRVG8D1MQ9Y,  (17.91),CAD,Cash,,,, Emilio Lagman , **** 9537 ,,,,,,,,5773 Software License
+2026-01-06T00:51:43,Purchase,DROPBOX*YV9SJKYVKKTY,  (24.06),CAD,Cash,,,, Emilio Lagman , **** 0724 ,,,,,,,,5773 Software License
+2026-01-06T05:17:20,Purchase,ZOHO-CRM,"  (1,666.84)",CAD,Cash,,,, Erin Baile , **** 8169 ,,,,,,,,5773 Software License
+2026-01-06T17:40:29,Purchase,TWILIO SENDGRID,  (31.19),CAD,Cash,22.34,USD,,Erin Baile,**** 5749,,,,,,,  1.396150 ,5773 Software License
+2026-01-07T00:25:34,Purchase,"GITHUB, INC.",  (14.03),CAD,Cash,1/9/1900,USD,Recurring monthly purchases and licenses, Erin Baile , **** 8472 ,,,,,,,  1.403000 ,5773 Software License
+2026-01-08T00:15:23,Purchase,"GITHUB, INC.",  (14.03),CAD,Cash,1/9/1900,USD,Recurring monthly purchases and licenses, Erin Baile , **** 8472 ,,,,,,,  1.403000 ,5773 Software License
+2026-01-08T04:27:40,Purchase,"ROLLBAR, INC","  (1,616.99)",CAD,Cash,1149,USD,,Erin Baile,**** 8613,,,,,,,  1.407302 ,5773 Software License
+2026-01-10T03:56:25,Purchase,VESTA  *CHATR,  (16.80),CAD,Cash,,,"Vesta Chatr Mobile phone for devops, cancelling it soon. Erin's card was set moving it to a separate card because it is tech owned and soon cancelled", Erin Baile , **** 9878 ,,,,,,,,5773 Software License
+2026-01-10T06:05:37,Purchase,Dropbox 6LYQK5CHHRCN,  (17.91),CAD,Cash,,,, Emilio Lagman , **** 0465 ,,,,,,,,5773 Software License
+2026-01-10T06:25:41,Purchase,PADDLE.NET* N8N CLOUD1,  (110.51),CAD,Cash,67.2,EUR,, Erin Baile , **** 6890 ,,,,,,,  1.644494 ,5773 Software License
+2026-01-10T06:45:16,Purchase,NAME-CHEAP.COM* HNHCUO,  (20.25),CAD,Cash,1/13/1900,USD,, Erin Baile , **** 0089 ,,,,,,,  1.410167 ,5773 Software License
+2026-01-11T22:02:29,Purchase,ZOOM.COM 888-799-9666,  (14.90),CAD,Cash,,,, Dillon Hall , **** 6151 ,,,,,,,,5773 Software License
+2026-01-12T18:10:27,Purchase,CLOUDFLARE,  (53.69),CAD,Cash,37.99,USD,, Erin Baile , **** 3003 ,,,,,,,  1.413267 ,5773 Software License
+2026-01-12T18:10:28,Purchase,CLOUDFLARE,  (53.00),CAD,Cash,2/5/1900,USD,, Erin Baile , **** 3003 ,,,,,,,  1.413333 ,5773 Software License
+2026-01-13T05:30:55,Purchase,CLAUDE.AI SUBSCRIPTION,  (156.80),CAD,Cash,,,Claude subscription for mike , Michael Galpin , **** 7387 ,,,,,,,,5773 Software License
+2026-01-13T07:00:21,Purchase,CLOUDFLARE,  (9.76),CAD,Cash,1/5/1900,USD,, Erin Baile , **** 3003 ,,,,,,,  1.414493 ,5773 Software License
+2026-01-13T17:10:17,Purchase,ATLASSIAN,"  (10,749.47)",CAD,Cash,10/28/1920,USD,"~$5350USD Atlassian monthly invoice (Jira, Confluence).  Rounding up to $5500USD, converting to CAD is ~$7500CAD.", Dillon Hall , **** 2826 ,,,,,,,  1.412980 ,5773 Software License
+2026-01-13T17:10:22,Purchase,NAME-CHEAP.COM* UA8KKX,  (10.15),CAD,Cash,7.18,USD,,Erin Baile,**** 0089,,,,,,,  1.413649 ,5773 Software License
+2026-01-14T00:20:32,Purchase,ELEMENTOR.COM,  (143.86),CAD,Cash,,,, Hector Alfonso Pertierra Marin , **** 8198 ,,,,,,,,5773 Software License
+2026-01-14T23:48:16,Purchase,Indeed CAI26-00015926,  (525.53),CAD,Cash,,,"General HR/ Recruiting - Indeed, BambooHR, CertN & LinkedIN", Erin Baile , **** 3741 ,,,,,,,,5773 Software License
+2026-01-15T23:12:47,Purchase,OPENAI *CHATGPT SUBSCR,  (31.61),CAD,Cash,22.4,USD,Recurring monthly purchases and licenses,Erin Baile,**** 8472,,,,,,,  1.411161 ,5773 Software License
+2026-01-16T16:25:20,Purchase,BROWSERSTACK.COM,  (77.55),CAD,Cash,2/22/1900,USD,BrowserStack is a browser compatibility testing software, Erin Baile , **** 8167 ,,,,,,,  1.413083 ,5773 Software License
+2026-01-17T23:36:51,Purchase,SOLARWINDS,"  (1,463.59)",CAD,Cash,10/31/1902,USD,, Erin Baile , **** 0317 ,,,,,,,  1.414097 ,5773 Software License
+2026-01-18T00:02:39,Purchase,"GITHUB, INC.",  (14.14),CAD,Cash,10,USD,Recurring monthly purchases and licenses, Erin Baile , **** 8472 ,,,,,,,  1.414000 ,5773 Software License
+2026-01-18T00:02:41,Purchase,OPENAI *CHATGPT SUBSCR,  (31.68),CAD,Cash,22.4,USD,Recurring monthly purchases and licenses, Erin Baile , **** 8472 ,,,,,,,  1.414286 ,5773 Software License
+2026-01-18T21:27:33,Purchase,"GITHUB, INC.",  (5.66),CAD,Cash,1/3/1900,USD,Recurring monthly purchases and licenses, Erin Baile , **** 8472 ,,,,,,,  1.415000 ,5773 Software License
+2026-01-18T21:27:33,Purchase,"GITHUB, INC.","  (1,611.41)",CAD,Cash,1139.53,USD,, Erin Baile , **** 3878 ,,,,,,,  1.414101 ,5773 Software License
+2026-01-19T05:55:41,Purchase,ZOHO-LEADCHAIN,  (14.01),CAD,Cash,,,, Erin Baile , **** 8169 ,,,,,,,,5773 Software License
+2026-01-20T00:10:53,Purchase,Dropbox 8KSMRCG5318V,  (17.91),CAD,Cash,,,Spring Dropbox Account - Will pause and then cancel CD Dropbox Account Float Card for Angela, Victor Ko , **** 8770 ,,,,,,,,5773 Software License
+2026-01-20T05:39:06,Purchase,ATLASSIAN,  (34.67),CAD,Cash,1/23/1900,USD,Recurring monthly purchases and licenses, Erin Baile , **** 8472 ,,,,,,,  1.413371 ,5773 Software License
+2026-01-21T01:03:01,Purchase,GOOGLE *YouTubePremium,  (14.55),CAD,Cash,,,, Dillon Hall , **** 6151 ,,,,,,,,5773 Software License
+2026-01-22T00:11:38,Purchase,MURF.AI,  (45.77),CAD,Cash,1/31/1900,USD,, Dillon Hall , **** 6151 ,,,,,,,  1.409175 ,5773 Software License
+2026-01-22T07:00:17,Purchase,CONNECTWISE,  (398.37),CAD,Cash,,,, Dillon Hall , **** 6151 ,,,,,,,,5773 Software License
+2026-01-23T04:00:30,Purchase,NAME-CHEAP.COM* 2HSLRD,  (261.35),CAD,Cash,7/3/1900,USD,, Erin Baile , **** 0089 ,,,,,,,  1.405410 ,5773 Software License
+2026-01-25T01:15:09,Purchase,OPENAI *CHATGPT SUBSCR,  (31.39),CAD,Cash,22.4,USD,License Renewals, Joyce Pong , **** 2640 ,,,,,,,  1.401339 ,5773 Software License
+2026-01-25T01:17:15,Purchase,VERCEL INC.,  (417.04),CAD,Cash,10/23/1900,USD,, Erin Baile , **** 7663 ,,,,,,,  1.401015 ,5773 Software License
+2026-01-25T01:17:57,Purchase,AHREFS.COM,  (390.72),CAD,Cash,10/4/1900,USD,, Hector Alfonso Pertierra Marin , **** 2672 ,,,,,,,  1.401033 ,5773 Software License
+2026-01-25T01:19:14,Purchase,GEMFURY,  (35.03),CAD,Cash,25,USD,,Erin Baile,**** 7645,,,,,,,  1.401200 ,5773 Software License
+2026-01-28T01:25:51,Purchase,Dropbox HC4MH1G2CB9K,  (17.91),CAD,Cash,,,New Card for Dropbox for Spring Financial email (to cancel CD email card), Victor Ko , **** 3207 ,,,,,,,,5773 Software License
+2026-01-28T01:28:47,Purchase,ANTHROPIC: CLAUDE TEAM,  (224.70),CAD,Cash,,,, Dillon Hall , **** 6151 ,,,,,,,,5773 Software License
+2026-01-28T01:28:58,Purchase,ANTHROPIC: CLAUDE TEAM,  (224.65),CAD,Cash,,,, Dillon Hall , **** 6151 ,,,,,,,,5773 Software License
+2026-01-28T01:29:39,Purchase,"CURSOR, AI POWERED IDE",  (169.37),CAD,Cash,,,, Dillon Hall , **** 6151 ,,,,,,,,5773 Software License
+2026-01-28T02:16:53,Purchase,GOOGLE*CLOUD QNCDQ2,  (100.00),CAD,Cash,,,, Erin Baile , **** 4848 ,,,,,,,,5773 Software License
+2026-01-29T03:57:42,Purchase,ORIGINALITY.AI,  (21.71),CAD,Cash,1/14/1900,USD,, Karina Plazola , **** 9909 ,,,,,,,  1.382803 ,5773 Software License
+2026-01-29T06:08:25,Purchase,ATLASSIAN,"  (1,223.81)",CAD,Cash,885.45,USD,"~$5350USD Atlassian monthly invoice (Jira, Confluence).  Rounding up to $5500USD, converting to CAD is ~$7500CAD.", Dillon Hall , **** 2826 ,,,,,,,  1.382133 ,5773 Software License
+2026-01-29T23:06:37,Purchase,"CURSOR, AI POWERED IDE",  (51.84),CAD,Cash,,,, Dillon Hall , **** 6151 ,,,,,,,,5773 Software License
+2026-01-29T23:11:35,Purchase,"CURSOR, AI POWERED IDE",  (53.24),CAD,Cash,,,, Dillon Hall , **** 6151 ,,,,,,,,5773 Software License
+2026-01-30T03:22:37,Purchase,HEX.TECH,"  (1,159.91)",CAD,Cash,4/18/1902,USD,, Erin Baile , **** 5135 ,,,,,,,  1.382129 ,5773 Software License
+2026-01-31T02:15:19,Purchase,Dropbox 52JZ9GFGHYQQ,  (17.91),CAD,Cash,,,, Emilio Lagman , **** 4162 ,,,,,,,,5773 Software License
+2026-01-31T16:17:39,Purchase,MIDDLEWAREHQ,  (152.24),CAD,Cash,4/19/1900,USD,"PMO Card, initially for Middleware additional license payments", Erin Baile , **** 5277 ,,,,,,,  1.383120 ,5773 Software License
+2026-01-03T04:15:42,Purchase,FREEDOM MOBILE,  (16.80),CAD,Cash,,,"Card for internet and telecom usages.  Initially just MyFax will be going on here, but will likely expand to more things.", Dillon Hall , **** 5467 ,,,,,,,,5780 Telephone & Utilities
+2026-01-08T00:20:22,Purchase,SHAW TELECOM GP,  (532.00),CAD,Cash,,,"Card for internet and telecom usages.  Initially just MyFax will be going on here, but will likely expand to more things.", Dillon Hall , **** 5467 ,,,,,,,,5780 Telephone & Utilities
+2026-01-26T01:27:21,Purchase,CCSI MYFAX,  (112.08),CAD,Cash,80,USD,"Card for internet and telecom usages.  Initially just MyFax will be going on here, but will likely expand to more things.", Dillon Hall , **** 5467 ,,,,,,,  1.401000 ,5780 Telephone & Utilities
+2026-01-26T20:45:46,Purchase,ROGERS ******0039,  (49.85),CAD,Cash,,,"Card for internet and telecom usages.  Initially just MyFax will be going on here, but will likely expand to more things.", Dillon Hall , **** 5467 ,,,,,,,,5780 Telephone & Utilities
+2026-01-02T22:05:35,Purchase,Go ibibo,  (250.54),CAD,Cash,,,, Harjot Kaur , **** 9999 ,,,,,,,,5784 Travel & Entertainment
+2026-01-07T00:46:02,Purchase,AIR CAN*    0142317037129,  (535.50),CAD,Cash,,,Montreal Christmas Party / Round Trip to YVR Winner - Youssef Zeghloul + 1. 1/2, Michael Galpin , **** 7387 ,,,,,,,,5784 Travel & Entertainment
+2026-01-07T00:46:03,Purchase,AIR CAN*    0142317037130,  (535.50),CAD,Cash,,,2/2 Flight , Michael Galpin , **** 7387 ,,,,,,,,5784 Travel & Entertainment
+2026-01-22T06:25:36,Purchase,SIXT 960753096,"  (1,596.98)",CAD,Cash,4/22/1902,GBP,, Michael Galpin , **** 7387 ,,,,,,,  1.892739 ,5784 Travel & Entertainment
+2026-01-23T06:27:27,Purchase,THE LONDON EDITION FOH,  (125.04),CAD,Cash,3/6/1900,GBP,, Michael Galpin , **** 7387 ,,,,,,,  1.894545 ,5784 Travel & Entertainment
+2026-01-23T06:27:28,Purchase,THE LONDON EDITION FOH,"  (8,258.08)",CAD,Cash,12/11/1911,GBP,, Michael Galpin , **** 7387 ,,,,,,,  1.892727 ,5784 Travel & Entertainment
+2026-01-23T06:27:28,Purchase,THE LONDON EDITION FOH,  (98.52),CAD,Cash,2/20/1900,GBP,, Michael Galpin , **** 7387 ,,,,,,,  1.894615 ,5784 Travel & Entertainment
+2026-01-28T02:17:36,Purchase,HUDSON VANCOUVER ARPT,  (24.13),CAD,Cash,,,, Michael Galpin , **** 7387 ,,,,,,,,5784 Travel & Entertainment
+2026-01-29T00:10:52,Purchase,FAIRMONT ROYAL YORK HOTEL,  (45.49),CAD,Cash,,,, Michael Galpin , **** 7387 ,,,,,,,,5784 Travel & Entertainment
+2026-01-29T06:08:17,Purchase,THE ST REGIS TORONTO,  (60.74),CAD,Cash,,,, Sara Garcia , **** 2475 ,,,,,,,,5784 Travel & Entertainment
+2026-01-30T03:29:32,Purchase,YVR PARKING,  (271.00),CAD,Cash,,,, Sara Garcia , **** 2475 ,,,,,,,,5784 Travel & Entertainment
+2026-01-30T06:28:20,Purchase,Sixt 2425604-1180066,  (247.45),CAD,Cash,5/9/1900,GBP,, Michael Galpin , **** 7387 ,,,,,,,  1.903462 ,5784 Travel & Entertainment
+2026-01-30T22:43:41,Purchase,ST. REGIS TORONTO,"  (2,210.58)",CAD,Cash,,,, Michael Galpin , **** 7387 ,,,,,,,,5784 Travel & Entertainment
+2026-01-30T22:43:41,Purchase,ST. REGIS TORONTO,"  (2,768.86)",CAD,Cash,,,, Michael Galpin , **** 7387 ,,,,,,,,5784 Travel & Entertainment
+2026-01-10T03:55:39,Purchase,CACTUS CLUB COAL HARBO,  (162.01),CAD,Cash,,,, Cory Eden , **** 7993 ,,,,,,,,5785 Meals and Entertainment
+2026-01-13T19:30:22,Purchase,SQ *JOEY BENTALL ONE,  (231.32),CAD,Cash,,,Exec lunch with TGI post meeting in office, Michael Galpin , **** 7387 ,,,,,,,,5785 Meals and Entertainment
+2026-01-14T00:17:17,Purchase,THE FAIRMONT WATERFRONT,  (93.24),CAD,Cash,,,, Michael Galpin , **** 7387 ,,,,,,,,5785 Meals and Entertainment
+2026-01-15T23:17:38,Purchase,FAIRMONT PACIFIC RIM,  (36.80),CAD,Cash,,,, Michael Galpin , **** 7387 ,,,,,,,,5785 Meals and Entertainment
+2026-01-18T22:42:11,Purchase,SQ *STRAKER'S,  (640.92),CAD,Cash,12/3/1900,GBP,, Michael Galpin , **** 7387 ,,,,,,,  1.892741 ,5785 Meals and Entertainment
+2026-01-19T06:15:33,Purchase,CAFFE NERO HT 2  ARRIVALS,  (7.49),CAD,Cash,1/2/1900,GBP,, Michael Galpin , **** 7387 ,,,,,,,  1.896203 ,5785 Meals and Entertainment
+2026-01-20T06:15:24,Purchase,TST-Dover Street Count,  (259.02),CAD,Cash,5/15/1900,GBP,, Michael Galpin , **** 7387 ,,,,,,,  1.892729 ,5785 Meals and Entertainment
+2026-01-20T17:05:27,Purchase,PYU*BIGTREE ENTERTAINM,  (49.58),CAD,Cash,9/12/1908,INR,, Harjot Kaur , **** 9999 ,,,,,,,  0.015598 ,5785 Meals and Entertainment
+2026-01-20T17:05:27,Purchase,PYU*BIGTREE ENTERTAINM,  (50.74),CAD,Cash,11/26/1908,INR,, Harjot Kaur , **** 9999 ,,,,,,,  0.015595 ,5785 Meals and Entertainment
+2026-01-20T17:05:28,Purchase,PYU*BIGTREE ENTERTAINM,  (101.48),CAD,Cash,10/24/1917,INR,, Harjot Kaur , **** 9999 ,,,,,,,  0.015595 ,5785 Meals and Entertainment
+2026-01-28T01:22:30,Purchase,YVR DIRTY APRON (PIER C),  (63.51),CAD,Cash,,,, Michael Galpin , **** 7387 ,,,,,,,,5785 Meals and Entertainment
+2026-01-29T22:44:02,Purchase,RICHMOND STATION,  (177.98),CAD,Cash,,,, Sara Garcia , **** 2475 ,,,,,,,,5785 Meals and Entertainment
+2026-01-11T22:03:22,Purchase,NECTAR HR,"  (1,463.11)",CAD,Cash,10/31/1902,USD,Colombia payouts, Emilio Lagman , **** 1836 ,,,,,,,  1.413087 ,Accounts Payable Sage
+2026-01-13T00:52:15,Purchase,"DATADOG, INC.","  (7,995.55)",CAD,Cash,6/28/1915,USD,, Erin Baile , **** 9433 ,,,,,,,  1.413083 ,Accounts Payable Sage
+2026-01-13T06:15:19,Purchase,Feefo Holdings Ltd,  (370.94),CAD,Cash,9/18/1900,USD,, Emilio Lagman , **** 8983 ,,,,,,,  1.413105 ,Accounts Payable Sage
+2026-01-13T00:47:30,Refund,AMAZON.CA* TO0GV8I93,  10.00 ,CAD,Cash,,,, Karina Plazola , **** 2636 ,,,,,,,,5700 Office Expenses
+2026-01-15T23:19:18,Refund,ZOMATO LIMITED,  20.22 ,CAD,Cash,1/13/1900,USD,, Harjot Kaur , **** 9999 ,,,,,,,  1.407098 ,5700 Office Expenses
+2026-01-27T03:16:15,Refund,Dropbox CY8XNYTCKK72,  4.63 ,CAD,Cash,,,Dropbox Plus Subscription - use by F&A team, Victor Ko , **** 6606 ,,,,,,,,5773 Software License
+2026-01-27T03:35:10,Refund,DROPBOX*SYSR46X8653P,  3.46 ,CAD,Cash,,,Monthly Dropbox Subscription, Emilio Lagman , **** 7649 ,,,,,,,,5773 Software License
+2026-01-27T06:50:27,Refund,DROPBOX*SHRVG8D1MQ9Y,  5.78 ,CAD,Cash,,,, Emilio Lagman , **** 9537 ,,,,,,,,5773 Software License
+2026-01-28T02:17:13,Refund,DROPBOX*YV9SJKYVKKTY,  6.98 ,CAD,Cash,,,, Emilio Lagman , **** 0724 ,,,,,,,,5773 Software License
+2026-01-31T02:18:24,Refund,Dropbox 8KSMRCG5318V,  11.56 ,CAD,Cash,,,Spring Dropbox Account - Will pause and then cancel CD Dropbox Account Float Card for Angela, Victor Ko , **** 8770 ,,,,,,,,5773 Software License

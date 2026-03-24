@@ -23,6 +23,7 @@ notes.txt
 status.txt
 analysis/
 *.csv
+!data/*.csv
 *.bak
 .DS_Store
 
