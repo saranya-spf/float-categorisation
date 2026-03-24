@@ -1,4 +1,4 @@
-from typing import Tuple, List
+from typing import Tuple
 
 import pandas as pd
 import scipy.sparse as sp

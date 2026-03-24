@@ -1,6 +1,9 @@
+import re
 from typing import List
 
 import pandas as pd
+
+from float_categorization.constant import NAME_TO_ID, NAME_UNKNOWN_ID
 
 
 class FeatureProcessor:
@@ -12,10 +15,11 @@ class FeatureProcessor:
         cols_to_drop = ["date", "funding account", "currency"]
         self.drop_columns(cols_to_drop)
 
-        optional_cols_to_drop = ["spender", "approver", "payment authorizer"]
-        self.drop_columns(optional_cols_to_drop)
+        name_based_features = ["spender", "approver", "payment authorizer"]
+        # self.drop_columns(name_based_features)
+        self.encode_name_based_fields(name_based_features)
 
-        self.one_hot_encode_null_values()
+        self.one_hot_encode_only_for_null_values()
         self.process_further()
 
         return self.df
@@ -23,7 +27,7 @@ class FeatureProcessor:
     def drop_columns(self, cols_to_drop: List[str]):
         self.df.drop(cols_to_drop, axis=1, inplace=True, errors="ignore")
 
-    def one_hot_encode_null_values(self):
+    def one_hot_encode_only_for_null_values(self):
         cols_to_one_hot = [
             "account",
             "initial amount",
@@ -46,6 +50,51 @@ class FeatureProcessor:
             self.df[cols], columns=cols, drop_first=False, dtype=int
         )
         self.df = pd.concat([self.df, dummies], axis=1)
+
+    @staticmethod
+    def _normalize_name(name) -> str:
+        """Lowercase, collapse whitespace, keep only first and last name."""
+        if pd.isna(name):
+            return ""
+        name = str(name).strip().casefold()
+        name = re.sub(r"\s+", " ", name)
+        parts = name.split()
+        if len(parts) > 2:
+            # Keep first + last to unify "hector alfonso pertierra marin" style
+            # but check the full name first in the dictionary
+            return name  # return full; lookup will try full then first+last
+        return name
+
+    @staticmethod
+    def _name_to_id(name: str) -> int:
+        """Map a single normalized name string to its integer ID."""
+        if not name:
+            return 0
+        if name in NAME_TO_ID:
+            return NAME_TO_ID[name]
+        # Try first + last only (handles middle-name mismatch)
+        parts = name.split()
+        if len(parts) > 2:
+            short = f"{parts[0]} {parts[-1]}"
+            if short in NAME_TO_ID:
+                return NAME_TO_ID[short]
+        return NAME_UNKNOWN_ID
+
+    def encode_name_based_fields(self, cols: List[str]):
+        # First pass: normalize and build a per-row cache so the same person
+        # appearing in multiple columns on the same row gets the same ID.
+        for col in cols:
+            if col in self.df.columns:
+                self.df[col] = self.df[col].apply(self._normalize_name)
+
+        for col in cols:
+            if col in self.df.columns:
+                self.df[col] = self.df[col].apply(self._name_to_id)
+
+        # Ensure integer dtype
+        for col in cols:
+            if col in self.df.columns:
+                self.df[col] = self.df[col].astype(int)
 
     def process_further(self):
         def parse_amount(val):

@@ -17,6 +17,7 @@ wheels/
 notebooks/
 
 # Others
+outputs/
 .vscode/
 notes.txt
 status.txt

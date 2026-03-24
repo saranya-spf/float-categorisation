@@ -1,26 +1,23 @@
 from __future__ import annotations
 
 import re
-import fuzzywuzzy as fuzz
-from typing import List
 
 import warnings
 from pathlib import Path
 import pandas as pd
 
 from float_categorization.pre_processing.text_processor import TextProcessor
-from float_categorization.pre_processing.feature_processor import FeatureProcessor
 
 
 # 5700 office expense                1595       [ML]
 # 5773 software license               855       [ML]
 # 5450 hr recruiting                  542       [DONE]
 # 5615 facebook advertising           539       [DONE]
-# 5785 meal entertainment             277       [ML for now]
-# 5772 computer                       269       [ML]
+# 5785 meal entertainment             277       [ML]
+# 5772 computer                       269       [DONE]
 # 5617 advertising                    227       [DONE]
 # account payable sage                195       [ML]
-# 5784 travel entertainment           147       [ML for now]
+# 5784 travel entertainment           147       [ML]
 # 5780 telephone utility               49       [DONE]
 # 1212 accrue receivables              35       [DONE]
 # 1351 spring mortgage group           35       [DONE]
@@ -33,13 +30,11 @@ from float_categorization.pre_processing.feature_processor import FeatureProcess
 # 1071 float usd account                6       [DONE]
 # 1358 bloom app inc                    4       [ML]
 # 5690 interest bank charge             2       [DONE]
-# 1359 1478897                          1       [DONE]
+# 1359 1478897                          1       [IGNORE]
 # 5626 training development             1       [IGNORE]
 
 
 class ManualFeatureTransformer:
-    """Simple per-column cleaning for deterministic rules (no spacy)."""
-
     def __init__(self, df: pd.DataFrame):
         self.df = df.copy()
         self.df.columns = self.df.columns.str.strip().str.casefold()

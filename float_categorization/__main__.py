@@ -7,6 +7,7 @@ from sklearn.metrics import classification_report, f1_score, accuracy_score
 
 from float_categorization.core import run_pipeline, run_inference
 from float_categorization.pre_processing.text_processor import TextProcessor
+from float_categorization.runners.decide_deterministic import deterministic_decider
 
 warnings.filterwarnings("ignore")
 default_path = Path(__file__).parents[1]
@@ -91,3 +92,33 @@ if __name__ == "__main__":
     )
     eval_results.to_csv(OUTPUT_PATH, index=False)
     print(f"Results saved to {OUTPUT_PATH}")
+
+    # Save full output: original test data + predicted_label + correct + source
+    outputs_path = default_path / "outputs" / "evaluation_results_test.csv"
+    full_output = test_df.loc[common_idx].copy()
+    full_output["predicted_label"] = predicted.values
+    full_output["correct"] = actual.values == predicted.values
+
+    # Determine prediction source (deterministic vs ML) for each row
+    det_matched, det_unmatched = deterministic_decider(
+        pd.read_csv(TEST_PATH), use_deterministic=True
+    )
+    deterministic_indices = set(det_matched.index)
+    full_output["prediction_source"] = [
+        "deterministic" if i in deterministic_indices else "ml_model"
+        for i in common_idx
+    ]
+
+    full_output.to_csv(outputs_path, index=False)
+    print(f"Results also saved to {outputs_path}")
+
+    # Print breakdown by source
+    for src in ["deterministic", "ml_model"]:
+        mask = full_output["prediction_source"] == src
+        n = mask.sum()
+        n_correct = (full_output.loc[mask, "correct"]).sum()
+        print(
+            f"  {src}: {n_correct}/{n} correct ({n_correct/n:.2%})"
+            if n
+            else f"  {src}: 0 rows"
+        )
