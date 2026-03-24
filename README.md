@@ -18,13 +18,7 @@ git clone https://github.com/saranya-spf/float-categorisation.git
 cd float-categorisation
 ```
 
-### 3. Create and Activate a Virtual Environment
-Create a python virtual environment
-```bash
-cd float-categorisation
-```
-
-### 3. Create and Activate a Virtual Environment
+### 3. Create and activate a python Virtual Environment
 Create a python virtual environment
 ```bash
 python -m venv .venv
