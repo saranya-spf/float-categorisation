@@ -20,7 +20,6 @@ if __name__ == "__main__":
     MODEL_PATH = MODEL_SAVE_DIR / "ensemble_model.joblib"
     OUTPUT_PATH = default_path / "analysis" / "evaluation_results_test.csv"
 
-    # ── Step 1: Train on (nearly) all training data and save model ──────────
     print("=" * 80)
     print("STEP 1: Training CatBoost model on full training data")
     print("=" * 80)
@@ -41,7 +40,7 @@ if __name__ == "__main__":
         random_state=42,
     )
 
-    # ── Step 2: Run inference on held-out test data ─────────────────────────
+    # Step 2: Run inference on held-out test data 
     print("\n" + "=" * 80)
     print("STEP 2: Running inference on test data")
     print("=" * 80)
@@ -53,8 +52,8 @@ if __name__ == "__main__":
     )
 
     # ── Step 3: Evaluate predictions vs actual labels ───────────────────────
-    # Predicted labels (from both deterministic + ML) are spacy-cleaned.
-    # Clean the actual gl_code the same way for fair comparison.
+    # Predicted labels (from both deterministic + ML) are spacy-cleaned
+    # Clean the actual gl_code the same way for fair comparison
     print("\n" + "=" * 80)
     print("STEP 3: Evaluation on Test Data")
     print("=" * 80)
@@ -67,7 +66,6 @@ if __name__ == "__main__":
 
     predicted_labels = result_df["predicted_label"]
 
-    # Align indices
     common_idx = actual_labels.index.intersection(predicted_labels.index)
     actual = actual_labels.loc[common_idx]
     predicted = predicted_labels.loc[common_idx]
@@ -82,24 +80,11 @@ if __name__ == "__main__":
     print("\n--- Per-GL-Code Classification Report (Precision / Recall / F1) ---\n")
     print(classification_report(actual, predicted, zero_division=0))
 
-    # Save per-row results
-    eval_results = pd.DataFrame(
-        {
-            "actual_label": actual.values,
-            "predicted_label": predicted.values,
-            "correct": actual.values == predicted.values,
-        }
-    )
-    eval_results.to_csv(OUTPUT_PATH, index=False)
-    print(f"Results saved to {OUTPUT_PATH}")
-
-    # Save full output: original test data + predicted_label + correct + source
     outputs_path = default_path / "outputs" / "evaluation_results_test.csv"
     full_output = test_df.loc[common_idx].copy()
     full_output["predicted_label"] = predicted.values
     full_output["correct"] = actual.values == predicted.values
 
-    # Determine prediction source (deterministic vs ML) for each row
     det_matched, det_unmatched = deterministic_decider(
         pd.read_csv(TEST_PATH), use_deterministic=True
     )
@@ -112,7 +97,6 @@ if __name__ == "__main__":
     full_output.to_csv(outputs_path, index=False)
     print(f"Results also saved to {outputs_path}")
 
-    # Print breakdown by source
     for src in ["deterministic", "ml_model"]:
         mask = full_output["prediction_source"] == src
         n = mask.sum()
