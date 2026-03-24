@@ -40,7 +40,7 @@ if __name__ == "__main__":
         random_state=42,
     )
 
-    # Step 2: Run inference on held-out test data 
+    # Step 2: Run inference on held-out test data
     print("\n" + "=" * 80)
     print("STEP 2: Running inference on test data")
     print("=" * 80)
@@ -102,7 +102,7 @@ if __name__ == "__main__":
         n = mask.sum()
         n_correct = (full_output.loc[mask, "correct"]).sum()
         print(
-            f"  {src}: {n_correct}/{n} correct ({n_correct/n:.2%})"
+            f"  {src}: {n_correct}/{n} correct ({n_correct / n:.2%})"
             if n
             else f"  {src}: 0 rows"
         )

@@ -257,4 +257,3 @@ def evaluate_ensemble_models(
 
     results.to_csv(output_path, index=False)
     print(f"Results saved to {output_path}")
-

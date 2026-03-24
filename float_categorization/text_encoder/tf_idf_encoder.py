@@ -36,4 +36,3 @@ class TfIdfEncoder:
     #   For test data
     def transform(self, texts: pd.Series) -> sp.csr_matrix:
         return self.vectorizer.transform(texts)
-

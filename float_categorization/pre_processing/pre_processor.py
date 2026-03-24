@@ -68,4 +68,3 @@ class PreProcessor:
             [sp.csr_matrix(self.X_initial.values), encoded]
         ).tocsr()
         return self.X_combined
-
