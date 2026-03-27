@@ -1,9 +1,6 @@
-import warnings
-
-warnings.filterwarnings("ignore")
-
 import logging
 from pathlib import Path
+import warnings
 
 import joblib
 import numpy as np
@@ -14,7 +11,7 @@ import spacy
 from catboost import CatBoostClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import accuracy_score, classification_report, f1_score
-from sklearn.model_selection import StratifiedKFold, train_test_split
+from sklearn.model_selection import StratifiedKFold
 from sklearn.utils.class_weight import compute_class_weight
 
 from float_categorization.constant import LABEL_COL
@@ -23,6 +20,8 @@ from float_categorization.pre_processing.pre_processor import PreProcessor
 from float_categorization.pre_processing.text_processor import TextProcessor
 from float_categorization.runners.decide_deterministic import deterministic_decider
 from float_categorization.text_encoder.tf_idf_encoder import TfIdfEncoder
+
+warnings.filterwarnings("ignore")
 
 optuna.logging.set_verbosity(optuna.logging.WARNING)
 logging.getLogger("catboost").setLevel(logging.ERROR)

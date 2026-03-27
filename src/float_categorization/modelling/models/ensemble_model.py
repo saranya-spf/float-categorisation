@@ -55,3 +55,15 @@ class EnsembleClassifier:
 
     def predict_proba(self, X: sp.csr_matrix) -> np.ndarray:
         return self.classifier.predict_proba(X)
+
+    def get_feature_importance(self, feature_names=None):
+        feature_importance = self.classifier.get_feature_importance()
+        if feature_names is None:
+            feature_names = [f"feature_{i}" for i in range(len(feature_importance))]
+        paired = sorted(
+            zip(feature_names, feature_importance), key=lambda x: x[1], reverse=True
+        )
+        print("\n--- Feature Importance (descending) ---")
+        for name, importance in paired:
+            if importance > 0:
+                print(f"  {name}: {importance:.2f}")

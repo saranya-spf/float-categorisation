@@ -77,6 +77,7 @@ def train_ml_model(
     y_test,
     label_names,
     Classifier,
+    feature_names=None,
     class_weights=None,
     **kwargs,
 ) -> EnsembleClassifier:
@@ -90,6 +91,7 @@ def train_ml_model(
         **kwargs,
     )
     model.fit(X_train, y_train_labels)
+    model.get_feature_importance(feature_names)
 
     preds = np.asarray(model.predict(X_test)).astype(int).ravel()
     accuracy = accuracy_score(y_test_labels, preds)
@@ -168,6 +170,20 @@ def run_ensemble_pipeline(
         prepare_ml_data(unmatched, test_size=kwargs.pop("test_size", 0.2))
     )
 
+    feature_names = list(processor.X_initial.columns) + list(
+        processor.tf_encoder.vectorizer.get_feature_names_out()
+    )
+    # n_manual = len(processor.X_initial.columns)
+    # n_tfidf = len(processor.tf_encoder.vectorizer.get_feature_names_out())
+    # print(f"\n--- All features ({len(feature_names)}) = {n_manual} manual + {n_tfidf} TF-IDF ---")
+    # print(f"  Manual: {', '.join(processor.X_initial.columns)}")
+    # print(f"  TF-IDF: {', '.join(processor.tf_encoder.vectorizer.get_feature_names_out())}")
+
+    # # Save pre-processed data to CSV
+    # preprocessed_path = Path(file_path).resolve().parent / "preprocessed_training_data.csv"
+    # processor.processed_df.to_csv(preprocessed_path, index=False)
+    # print(f"\nPre-processed data saved to {preprocessed_path}")
+
     model = train_ml_model(
         X_train,
         X_test,
@@ -175,6 +191,7 @@ def run_ensemble_pipeline(
         y_test,
         label_names,
         Classifier,
+        feature_names=feature_names,
         class_weights=class_weights if use_class_weights else None,
         **kwargs,
     )
