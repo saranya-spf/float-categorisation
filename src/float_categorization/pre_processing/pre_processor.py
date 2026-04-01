@@ -54,6 +54,7 @@ class PreProcessor:
 
         self.encoded = self.tf_encoder.fit_transform(self.X_initial["aggregated_text"])
         self.X_initial.drop("aggregated_text", axis=1, inplace=True)
+
         self.X_combined = sp.hstack(
             [sp.csr_matrix(self.X_initial.values), self.encoded]
         ).tocsr()
@@ -64,6 +65,7 @@ class PreProcessor:
         self.X_initial = self.processed_df.drop("gl_code", axis=1, errors="ignore")
         encoded = tf_encoder.transform(self.X_initial["aggregated_text"])
         self.X_initial.drop("aggregated_text", axis=1, inplace=True)
+
         self.X_combined = sp.hstack(
             [sp.csr_matrix(self.X_initial.values), encoded]
         ).tocsr()

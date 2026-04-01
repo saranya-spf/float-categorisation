@@ -170,19 +170,24 @@ def run_ensemble_pipeline(
         prepare_ml_data(unmatched, test_size=kwargs.pop("test_size", 0.2))
     )
 
-    feature_names = list(processor.X_initial.columns) + list(
-        processor.tf_encoder.vectorizer.get_feature_names_out()
+    all_tfidf_names = list(processor.tf_encoder.vectorizer.get_feature_names_out())
+    feature_names = list(processor.X_initial.columns) + all_tfidf_names
+    n_manual = len(processor.X_initial.columns)
+    n_tfidf = len(all_tfidf_names)
+    print(
+        f"\n--- All features ({len(feature_names)}) = {n_manual} manual + {n_tfidf} TF-IDF ---"
     )
-    # n_manual = len(processor.X_initial.columns)
-    # n_tfidf = len(processor.tf_encoder.vectorizer.get_feature_names_out())
-    # print(f"\n--- All features ({len(feature_names)}) = {n_manual} manual + {n_tfidf} TF-IDF ---")
-    # print(f"  Manual: {', '.join(processor.X_initial.columns)}")
-    # print(f"  TF-IDF: {', '.join(processor.tf_encoder.vectorizer.get_feature_names_out())}")
+    print(f"  Manual: {', '.join(processor.X_initial.columns)}")
+    print(
+        f"  TF-IDF: {', '.join(processor.tf_encoder.vectorizer.get_feature_names_out())}"
+    )
 
-    # # Save pre-processed data to CSV
-    # preprocessed_path = Path(file_path).resolve().parent / "preprocessed_training_data.csv"
-    # processor.processed_df.to_csv(preprocessed_path, index=False)
-    # print(f"\nPre-processed data saved to {preprocessed_path}")
+    # Save pre-processed data to CSV
+    preprocessed_path = (
+        Path(file_path).resolve().parent / "preprocessed_training_data.csv"
+    )
+    processor.processed_df.to_csv(preprocessed_path, index=False)
+    print(f"\nPre-processed data saved to {preprocessed_path}")
 
     model = train_ml_model(
         X_train,
@@ -221,13 +226,13 @@ def inference_ensemble_models(
     df = pd.read_csv(file_path)
     matched, unmatched = deterministic_decider(df, use_deterministic)
 
-    processor = PreProcessor(unmatched, is_training=True)
-    processor()
-
     saved = joblib.load(model_path)
     model = saved["model"]
     label_names = saved["label_names"]
     tf_encoder = saved["tf_encoder"]
+
+    processor = PreProcessor(unmatched, is_training=True)
+    processor()
 
     X_all = processor.process_for_inference(tf_encoder)
     preds = np.asarray(model.predict(X_all)).astype(int).ravel()
@@ -246,13 +251,13 @@ def evaluate_ensemble_models(
     df = pd.read_csv(file_path)
     matched, unmatched = deterministic_decider(df, use_deterministic)
 
-    processor = PreProcessor(unmatched, is_training=True)
-    processor()
-
     saved = joblib.load(model_path)
     model = saved["model"]
     tf_encoder = saved["tf_encoder"]
     label_names = saved["label_names"]
+
+    processor = PreProcessor(unmatched, is_training=True)
+    processor()
 
     X = processor.process_for_inference(tf_encoder)
     y = pd.get_dummies(processor.processed_df["gl_code"], dtype=int)

@@ -13,8 +13,6 @@ wheels/
 # Environment Variables
 .env
 
-# Notebooks
-notebooks/
 
 # Others
 outputs/
